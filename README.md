@@ -19,7 +19,7 @@
 | Project | Description | Status |
 | :----- | :------ | :--- |
 | CoreNetKit | Description | Status
-| RDDM | Description | Status
+| RDDM (https://github.com/surfstudio/ReactiveDataDisplayManager) | Позволяет быстро и удобно работать с UI колллекциями элементов (UITableView, UICollectionView) | ---
 | CSL | Description | Status
 | SurfObjcUtils | Description | Status
 | CSLSwift | Description | Status
