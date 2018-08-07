@@ -16,13 +16,13 @@
 
 Библиотеки которые мы используем для разработки
 
-| Project | Description | Status |
-| :----- | :------ | :----- |
-| CoreNetKit | Description | Status
-| [RDDM](https://github.com/surfstudio/ReactiveDataDisplayManager) | Позволяет быстро и удобно работать с UI колллекциями (UITableView, UICollectionView) | [![Build Status](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager.svg?branch=master&style=flat)](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager)
-| CSL | Description | Status
-| SurfObjcUtils | Description | Status
-| CSLSwift | Description | Status
+| Project | Description | Author | Status |
+| :----- | :--- | :--- | :--- |
+| CoreNetKit | Description | [LastSprint](https://github.com/LastSprint) |Status
+| [RDDM](https://github.com/surfstudio/ReactiveDataDisplayManager) | Для удобной работы с UI колллекциями | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager.svg?branch=master&style=flat)](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager)
+| CSL | Description | Surf |Status
+| SurfObjcUtils | Description | Surf | Status
+| CSLSwift | Description | Surf | Status
 
 ## Forks
 
