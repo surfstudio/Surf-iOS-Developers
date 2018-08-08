@@ -24,26 +24,25 @@ Utility may be is a phone number formatter or simple NSAttributedString wrapper.
 
 For more details see [iOS Utils](https://github.com/surfstudio/iOS-Utils)
 ## Libs
-Библиотеки которые мы используем для разработки
+Library is something bigger then utility. This section contains references to the our open source libraries we develope, support and use
 
 | Project | Description | Author | Status |
 | :----- | :--- | :--- | :---: |
 | [CoreEvents](https://github.com/surfstudio/CoreEvents) | C#-like events | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreEvents)
-| [CoreNetKit](https://github.com/surfstudio/CoreNetKit) | Библиотека для работы с сетью | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreNetKit)
-| [RDDM](https://github.com/surfstudio/ReactiveDataDisplayManager) | Для удобной работы с UI колллекциями | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager.svg?branch=master&style=flat)](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager)
+| [CoreNetKit](https://github.com/surfstudio/CoreNetKit) | Faster and easy way to implement network interaction | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreNetKit)
+| [RDDM](https://github.com/surfstudio/ReactiveDataDisplayManager) | For comfortable work with UI Collections | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager.svg?branch=master&style=flat)](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager)
 | CSL | Description | Surf |Status
 | SurfObjcUtils | Description | Surf | Status
 | CSLSwift | Description | Surf | Status
 ## Forks
 | Project | Motivation |
 | :--- | :---- |
-| [Generamba](github.com/surfstudio/Generamba) | Необходимо контроллировтаь конкретно эту версию
+| [Generamba](github.com/surfstudio/Generamba) | For bundler
 # Best practices
 ## Project initialization
-- [Xcode-Project-Templates](https://github.com/surfstudio/Xcode-Project-Templates) для инициаллизации проекта.
-Помогает нам быстро создавать проект с нужной структурой папок, необходимыми файлами (Pods) и так далее.
+- [Xcode-Project-Templates](https://github.com/surfstudio/Xcode-Project-Templates) templates collection for easy project initialization. Generate needed folder structure, needed files e.t.c.
 ## Code style
-- [Swift Code Style](https://github.com/surfstudio/SwiftCodestyle) - правила для оформления кода на языке Swift
-- [Obj-C Code Style](https://github.com/surfstudio/objective-c-style-guide) - правила для оформления кода на языке Objective-C
+- [Swift Code Style](https://github.com/surfstudio/SwiftCodestyle) - style guides for Swift.
+- [Obj-C Code Style](https://github.com/surfstudio/objective-c-style-guide) - style guides for Objective-C.
 ## Code generation
-- [Generamba templates](https://github.com/surfstudio/generamba-templates) содержит набор шаблонов для Generamba.
+- [Generamba templates](https://github.com/surfstudio/generamba-templates) contains templates collection _(ViewController template, Presenter template and other)_ for Generamba
