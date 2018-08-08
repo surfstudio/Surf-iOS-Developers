@@ -23,29 +23,41 @@ If you create new awesome library you may add it to this repo in **Lib** section
 ## Pull request templates
 
 ### Add new library template
----
-**Name**: add *library_name*
 
-**Description**: Should contains main features of your library
+Name: *library_name*
 
-**Assigned to**: [LastSprint](https://guthub.com/LastSprint)
+Tags: New, Library
 
----
+Description: Should contains main features of your library
+
+Assigned to: [LastSprint](https://guthub.com/LastSprint)
+
 ### Update existing library info template
----
-**Name**: update *library_name*
 
-**Description**: Should contains short changelog (update motivation)
+Name: *library_name*
 
-**Assigned to**: [LastSprint](https://guthub.com/LastSprint)
+Tags: Update, Library
 
----
-## How to add item
+Description: Should contains short changelog (update motivation)
 
-If you want to add new library you should
+Assigned to: [LastSprint](https://guthub.com/LastSprint)
 
-1. Be in Surf iOS team
-2. Make fork
-3. Add information about your library to **Lib** section by existing pattern
-4. Make pull request and assign it on [LastSprint](https://github.com/LastSprint)
-5. Wait ~4 months~
+### Add new fork template
+
+Name: *project_name*
+
+Tags: New, Fork
+
+Description: Should contains short changelog (update motivation)
+
+Assigned to: [LastSprint](https://guthub.com/LastSprint)
+
+### Update existing fork info template
+
+Name: *project_name*
+
+Tags: Update, Fork
+
+Description: Should contains short changelog (update motivation)
+
+Assigned to: [LastSprint](https://guthub.com/LastSprint)
