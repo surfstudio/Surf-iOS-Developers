@@ -17,7 +17,7 @@
 Библиотеки которые мы используем для разработки
 
 | Project | Description | Author | Status |
-| :----- | :--- | :--- | --- |
+| :----- | :--- | :--- | :---: |
 | [CoreEvents](https://github.com/surfstudio/CoreEvents) | C#-like events | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreEvents)
 | [CoreNetKit](https://github.com/surfstudio/CoreNetKit) | Библиотека для работы с сетью | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreNetKit)
 | [RDDM](https://github.com/surfstudio/ReactiveDataDisplayManager) | Для удобной работы с UI колллекциями | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager.svg?branch=master&style=flat)](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager)
