@@ -1,7 +1,15 @@
 # Info
 
 For contributing to this repo you must be a member of Surf iOS team
-At this moment you 
+
+At this moment open for contribution:
+- Libs section
+- Forks section
+
+**Topic**
+
+- [Libs requirements](#libs)
+- [Forks requirements](#fork)
 
 ## Libs
 
@@ -20,6 +28,10 @@ If you create new awesome library you may add it to this repo in **Lib** section
 - Repo muts be integrated with any code smell checker
 - Repo must contains at least one stable version
 - Repo should contains *.podspec* for your library
+
+## Fork
+
+Adding project to this section haven't specific requirements. Just look at the templates. 
 
 ## Pull request templates
 
