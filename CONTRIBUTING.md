@@ -23,21 +23,21 @@ If you create new awesome library you may add it to this repo in **Lib** section
 ## Pull request templates
 
 ### Add new library template
-
+---
 **Name**: add *library_name*
 
 **Description**: Should contains main features of your library
 
 **Assigned to**: [LastSprint](https://guthub.com/LastSprint)
-
-### Update existing library info
-
+---
+### Update existing library info template
+---
 **Name**: update *library_name*
 
 **Description**: Should contains short changelog (update motivation)
 
 **Assigned to**: [LastSprint](https://guthub.com/LastSprint)
-
+---
 ## How to add item
 
 If you want to add new library you should
