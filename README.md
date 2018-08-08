@@ -1,4 +1,4 @@
-# Surf iOS department open source projects
+# Surf iOS
 
 Репозиторий содержит ссылки и мета ифнормацию для каждого опенсорного решения iOS команды Surf. 
 
