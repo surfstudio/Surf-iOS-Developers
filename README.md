@@ -20,6 +20,7 @@
 | :----- | :--- | :--- | --- |
 | [CoreNetKit](https://github.com/surfstudio/CoreNetKit) | Библиотека для работы с сетью | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreNetKit)
 | [RDDM](https://github.com/surfstudio/ReactiveDataDisplayManager) | Для удобной работы с UI колллекциями | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager.svg?branch=master&style=flat)](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager)
+| [CoreEvents](https://github.com/surfstudio/CoreEvents) | C#-like events | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreNetKit)
 | CSL | Description | Surf |Status
 | SurfObjcUtils | Description | Surf | Status
 | CSLSwift | Description | Surf | Status
