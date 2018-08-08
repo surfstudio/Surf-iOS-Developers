@@ -29,6 +29,7 @@ If you create new awesome library you may add it to this repo in **Lib** section
 **Description**: Should contains main features of your library
 
 **Assigned to**: [LastSprint](https://guthub.com/LastSprint)
+
 ---
 ### Update existing library info template
 ---
@@ -37,6 +38,7 @@ If you create new awesome library you may add it to this repo in **Lib** section
 **Description**: Should contains short changelog (update motivation)
 
 **Assigned to**: [LastSprint](https://guthub.com/LastSprint)
+
 ---
 ## How to add item
 
