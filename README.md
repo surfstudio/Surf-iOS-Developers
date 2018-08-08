@@ -2,15 +2,26 @@
 
 Репозиторий содержит ссылки и короткое описание для каждого опенсорного решения iOS отдела Surf 
 
+**Topics**
+
+* [Pods](#pods)
+  * [Utils](#utils)
+  * [Libs](#libs)
+  * [Forks](#forks)
+* [Best Practices](#best-practices)
+  * [Project initialization](#project-initialization)
+  * [Code style](#code-style)
+  * [Code generation](#code-generation)
+
 # Pods
 
 Раздел содержит описание библиотек с исходным кодом
 
 ## Utils
 
-В качестве коллекции утилит используется один репозиторий, внутри которого в качестве сабспек лежат лежат утилитки
+Репозиторий утилит это набор мелких библиотек, представленных через CocoaPods subspecs. 
 
-**Здесь будет ссылка**
+https://github.com/surfstudio/iOS-Utils
 
 ## Libs
 
@@ -29,16 +40,16 @@
 
 | Project | Motivation |
 | :--- | :---- |
-| [Generamba](github.com/surfstudio/Generamba) | cause why not?
+| [Generamba](github.com/surfstudio/Generamba) | Необходимо контроллировтаь конкретно эту версию
 
-# Best Practices
+# Best practices
 
 ## Project initialization
 
 [Xcode-Project-Templates](https://github.com/surfstudio/Xcode-Project-Templates) для инициаллизации проекта.
 Помогает нам быстро создавать проект с нужной структурой папок, необходимыми файлами (Pods) и так далее.
 
-## Code Style
+## Code style
 
 - [Swift Code Style](https://github.com/surfstudio/SwiftCodestyle) - правила для оформления кода на языке Swift
 - [Obj-C Code Style](https://github.com/surfstudio/objective-c-style-guide) - правила для оформления кода на языке Objective-C
