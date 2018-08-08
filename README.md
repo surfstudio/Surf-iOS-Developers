@@ -1,17 +1,17 @@
 # Surf iOS department open source projects
 
-Репозиторий содержит ссылки и короткое описание для каждого опенсорного решения iOS отдела Surf 
+Репозиторий содержит ссылки и мета ифнормацию для каждого опенсорного решения iOS команды Surf. 
 
 **Topics**
 
-* [Pods](#pods)
-  * [Utils](#utils)
-  * [Libs](#libs)
-  * [Forks](#forks)
-* [Best Practices](#best-practices)
-  * [Project initialization](#project-initialization)
-  * [Code style](#code-style)
-  * [Code generation](#code-generation)
+- [Pods](#pods)
+  - [Utils](#utils)
+  - [Libs](#libs)
+  - [Forks](#forks)
+- [Best Practices](#best-practices)
+  - [Project initialization](#project-initialization)
+  - [Code style](#code-style)
+  - [Code generation](#code-generation)
 
 # Pods
 
@@ -46,7 +46,7 @@ https://github.com/surfstudio/iOS-Utils
 
 ## Project initialization
 
-[Xcode-Project-Templates](https://github.com/surfstudio/Xcode-Project-Templates) для инициаллизации проекта.
+- [Xcode-Project-Templates](https://github.com/surfstudio/Xcode-Project-Templates) для инициаллизации проекта.
 Помогает нам быстро создавать проект с нужной структурой папок, необходимыми файлами (Pods) и так далее.
 
 ## Code style
