@@ -1,6 +1,7 @@
 # Info
 
 For contributing to this repo you must be a member of Surf iOS team
+At this moment you 
 
 ## Libs
 
