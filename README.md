@@ -1,7 +1,7 @@
 
 ![Surf iOS Team](https://raw.githubusercontent.com/surfstudio/iOS_Dev/master/img/surf_logo.png)
 # Surf iOS
-Репозиторий содержит ссылки и мета ифнормацию для каждого опенсорного решения iOS команды Surf. 
+Repo contains references and meta information about Surf iOS team libs, utils and e.t.c. 
 
 **Topics**
 
@@ -13,19 +13,17 @@
   - [Project initialization](#project-initialization)
   - [Code style](#code-style)
   - [Code generation](#code-generation)
-
 # Pods
 
-Раздел содержит описание библиотек с исходным кодом
-
+Contains references and meta info about our open source projects.
 ## Utils
 
-Репозиторий утилит это набор мелких библиотек, представленных через CocoaPods subspecs. 
+Contains all small utils separated by CocoaPods subscpec.
 
-https://github.com/surfstudio/iOS-Utils
+Utility may be is a phone number formatter or simple NSAttributedString wrapper.
 
+For more details see [iOS Utils](https://github.com/surfstudio/iOS-Utils)
 ## Libs
-
 Библиотеки которые мы используем для разработки
 
 | Project | Description | Author | Status |
@@ -36,25 +34,16 @@ https://github.com/surfstudio/iOS-Utils
 | CSL | Description | Surf |Status
 | SurfObjcUtils | Description | Surf | Status
 | CSLSwift | Description | Surf | Status
-
 ## Forks
-
 | Project | Motivation |
 | :--- | :---- |
 | [Generamba](github.com/surfstudio/Generamba) | Необходимо контроллировтаь конкретно эту версию
-
 # Best practices
-
 ## Project initialization
-
 - [Xcode-Project-Templates](https://github.com/surfstudio/Xcode-Project-Templates) для инициаллизации проекта.
 Помогает нам быстро создавать проект с нужной структурой папок, необходимыми файлами (Pods) и так далее.
-
 ## Code style
-
 - [Swift Code Style](https://github.com/surfstudio/SwiftCodestyle) - правила для оформления кода на языке Swift
 - [Obj-C Code Style](https://github.com/surfstudio/objective-c-style-guide) - правила для оформления кода на языке Objective-C
-
 ## Code generation
-
 - [Generamba templates](https://github.com/surfstudio/generamba-templates) содержит набор шаблонов для Generamba.
