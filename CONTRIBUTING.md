@@ -3,13 +3,14 @@
 For contributing to this repo you must be a member of Surf iOS team
 
 At this moment open for contribution:
-- Libs section
-- Forks section
+- [Libs section](https://github.com/surfstudio/iOS_Devs#libs)
+- [Forks section](https://github.com/surfstudio/iOS_Devs#forks)
 
 **Topic**
 
 - [Libs requirements](#libs)
 - [Forks requirements](#fork)
+- [PR Templates](#pull-request-templates)
 
 ## Libs
 
