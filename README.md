@@ -1,5 +1,7 @@
 # Surf iOS
 
+![Surf iOS Team](https://raw.githubusercontent.com/surfstudio/iOS_Dev/img/surf_logo.png)
+
 Репозиторий содержит ссылки и мета ифнормацию для каждого опенсорного решения iOS команды Surf. 
 
 **Topics**
