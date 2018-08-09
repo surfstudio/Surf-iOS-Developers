@@ -13,7 +13,7 @@
 - [Best Practices](#best-practices)
   - [Инициаллизация проектов](#инициаллизация-проектов)
   - [Code style](#code-style)
-  - [Code generation](#code-generation)
+  - [Кодогенерация](#кодогенерация)
  
 # Pods
 
@@ -61,5 +61,5 @@
 - [Swift Code Style](https://github.com/surfstudio/SwiftCodestyle) - указания по оформлению кода на Swift.
 - [Obj-C Code Style](https://github.com/surfstudio/objective-c-style-guide) - указания по оформлению кода на Obj-C
 
-## Code generation
+## Кодогенерация
 - [Generamba templates](https://github.com/surfstudio/generamba-templates) содержит набор шаблонов для генерации кода _(шаблон ViewController, шаблон Presenter и т.д.)_ для Generamba
