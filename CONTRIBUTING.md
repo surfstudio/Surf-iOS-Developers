@@ -6,7 +6,7 @@ At this moment open for contribution:
 - [Libs section](https://github.com/surfstudio/iOS_Devs#libs)
 - [Forks section](https://github.com/surfstudio/iOS_Devs#forks)
 
-**Topic**
+**Topics**
 
 - [Libs requirements](#libs)
 - [Forks requirements](#fork)
