@@ -1,78 +1,80 @@
 # Info
 
-For contributing to this repo you must be a member of Surf iOS team
+Для того, чтобы добавить что-нибудь в этот репозиторий вы должны быть членом iOS команды Surf
 
-At this moment open for contribution:
-- [Libs section](https://github.com/surfstudio/iOS_Devs#libs)
-- [Forks section](https://github.com/surfstudio/iOS_Devs#forks)
+На данный момент для изменений открыты секции:
+- [Libs](https://github.com/surfstudio/iOS_Devs#libs)
+- [Forks](https://github.com/surfstudio/iOS_Devs#forks)
 
-**Topics**
+**Список тем**
 
-- [Libs requirements](#libs)
-- [Forks requirements](#fork)
-- [PR Templates](#pull-request-templates)
+- [Libs](#libs)
+- [Forks](#fork)
+- [PR шаблоны](#Шаблон-для-Pull-request)
 
 ## Libs
 
-If you create new awesome library you may add it to this repo in **Lib** section.
+Если вы работаете над новой библиотекой и хоите доабвить ее в этот репозиторий необходимо, чтобы ваш репозиторий соответствовал некоторым требованиям, приведенным ниже. 
+Так же для Pull Request'ов тоже существуют правила 😇
 
 ### Requirements
 
-- LICENSE file
-- CONTRIBUTING.md file
-- README.md file with
-  - Description
-  - Build status image in top of file
-  - Code smell status in top of file
-  - Versioning information
-  - How to install section
-- Repo must be integrated with any CI
-- Repo muts be integrated with any code smell checker
-- Repo must contains at least one stable version
-- Repo should contains *.podspec* for your library
+- должен быть файл LICENSE (лицензия)
+- должен быть файл CONTRIBUTING.md с набором правил по оформлению PR и так далее. 
+- Должен быть README.md файл с
+  - Понятным описанием
+  - Примерами использования
+  - Картинкой статуса сборки (Build status)
+  - Картинкой статуса качества кода (Code smell status)
+  - Информацией о версионировании
+  - Секцией 'Как установить'
+- Репозиторий должен быть интегрирован с CI
+- Репозиторий должен быть интегрирован с системой проверка качества кода
+- Библиотека должна иметь хотя б одну стабильную версию
+- Репозиторий должен содержать *.podspec* для вашей библиотеки
 
 ## Fork
 
-Adding project to this section haven't specific requirements. Just look at the templates. 
+Здесь нету никаких особых правил, кроме весомых оснований сделать Fork ☺️
 
-## Pull request templates
+## Шаблон для Pull request
 
-### Add new library template
+### Шаблон добавления новой библиотеки
 
-Name: *library_name*
+Название PR: *имя_библиотеки*
 
-Tags: New, Library
+Теги: New, Library
 
-Description: Should contains main features of your library
+Описание: Короткий список фич
 
-Assigned to: [LastSprint](https://guthub.com/LastSprint)
+Назначать на: [LastSprint](https://guthub.com/LastSprint)
 
-### Update existing library info template
+### Шаблон обновления существующей библиотеки
 
-Name: *library_name*
+Название PR: *имя_библиотеки*
 
-Tags: Update, Library
+Теги: Update, Library
 
-Description: Should contains short changelog (update motivation)
+Описание: Должно содержать короткий список изменений или причину обновления
 
-Assigned to: [LastSprint](https://guthub.com/LastSprint)
+Назначать на: [LastSprint](https://guthub.com/LastSprint)
 
-### Add new fork template
+### Шаблон добавления Fork
 
-Name: *project_name*
+Название PR: *название_проекта*
 
-Tags: New, Fork
+Теги: New, Fork
 
-Description: Should contains short changelog (update motivation)
+Описание: Должено содержать причину ответвления
 
-Assigned to: [LastSprint](https://guthub.com/LastSprint)
+Назначать на: [LastSprint](https://guthub.com/LastSprint)
 
-### Update existing fork info template
+### IШаблон обновления существующего Fork
 
-Name: *project_name*
+Название PR: *название_проекта*
 
-Tags: Update, Fork
+Теги: Update, Fork
 
-Description: Should contains short changelog (update motivation)
+Описание: Должно содержать короткий список изменений или причину обновления
 
-Assigned to: [LastSprint](https://guthub.com/LastSprint)
+Назначать на: [LastSprint](https://guthub.com/LastSprint)
