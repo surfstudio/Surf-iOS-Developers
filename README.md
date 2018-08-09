@@ -27,13 +27,20 @@ For more details see [iOS Utils](https://github.com/surfstudio/iOS-Utils)
 Library is something bigger then utility. This section contains references to the our open source libraries we develope, support and use
 
 | Project | Description | Author | Status |
-| :----- | :--- | :--- | :---: |
+| :--- | :--- | :--- | :---: |
 | [CoreEvents](https://github.com/surfstudio/CoreEvents) | C#-like events | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreEvents)
 | [CoreNetKit](https://github.com/surfstudio/CoreNetKit) | Faster and easy way to implement network interaction | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreNetKit)
 | [RDDM](https://github.com/surfstudio/ReactiveDataDisplayManager) | For comfortable work with UI Collections | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager.svg?branch=master&style=flat)](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager)
-| CSL | Description | Surf |Status
-| SurfObjcUtils | Description | Surf | Status
-| CSLSwift | Description | Surf | Status
+
+
+**Deprecated**
+
+| Project | Description | Author |
+| :--- | :--- | :--- |
+| [CSL](https://bitbucket.org/surfstudio/cslswift/src/master/) | Network interaction Obj-C | Surf
+| [CSLSwift](https://bitbucket.org/surfstudio/cacheableservicelayer/src) | Network interaction Swift | Surf 
+| [SurfObjcUtils](https://bitbucket.org/surfstudio/surfobjcutils/src/master/) | Set of Obj-C utils | Surf 
+
 ## Forks
 | Project | Motivation |
 | :--- | :---- |
