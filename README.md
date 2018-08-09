@@ -1,55 +1,65 @@
 
 ![Surf iOS Team](https://raw.githubusercontent.com/surfstudio/iOS_Dev/master/img/surf_logo.png)
 # Surf iOS
-Repo contains references and meta information about Surf iOS team libs, utils and e.t.c. 
 
-**Topics**
+Репозиторий содержит ссылки и мета информацию о библиотеках, утилитах, подходах и т.п.
+
+**Содержание**
 
 - [Pods](#pods)
   - [Utils](#utils)
   - [Libs](#libs)
   - [Forks](#forks)
 - [Best Practices](#best-practices)
-  - [Project initialization](#project-initialization)
+  - [Инициаллизация проектов](#инициаллизация-проектов)
   - [Code style](#code-style)
   - [Code generation](#code-generation)
+ 
 # Pods
 
-Contains references and meta info about our open source projects.
+Содержит описание и ссылки на библиотеки с открытым исходным кодом. 
+Любую из этих библиотек можно установить к себе в проект с помощью `CocoaPods`
+
 ## Utils
 
-Contains all small utils separated by CocoaPods subscpec.
+Содержит набор небольших утилит. 
+Все утилиты находятся в однмо репозитории, но разбиты по разным `subspecs`
 
-Utility may be is a phone number formatter or simple NSAttributedString wrapper.
+Утилитой может быть форматер телефонных номеров или обертка над `NSAttributedString`
 
-For more details see [iOS Utils](https://github.com/surfstudio/iOS-Utils)
+Для получения более подробной информации [iOS Utils](https://github.com/surfstudio/iOS-Utils)
+
 ## Libs
-Library is something bigger then utility. This section contains references to our open source libraries we develope, support and use
 
-| Project | Description | Author | Status |
+Эта секция содержит короткое описание и ссылки на репозитории библиотек которые мы активно разрабатываем, поддерживаем и используем в своих проектах. 
+
+| Название | Описание | Автор | Статус |
 | :--- | :--- | :--- | :---: |
-| [CoreEvents](https://github.com/surfstudio/CoreEvents) | C#-like events | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreEvents)
-| [CoreNetKit](https://github.com/surfstudio/CoreNetKit) | Faster and easy way to implement network interaction | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreNetKit)
-| [RDDM](https://github.com/surfstudio/ReactiveDataDisplayManager) | For comfortable work with UI Collections | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager.svg?branch=master&style=flat)](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager)
-
+| [CoreEvents](https://github.com/surfstudio/CoreEvents) | C#-подобные события | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreEvents)
+| [CoreNetKit](https://github.com/surfstudio/CoreNetKit) | Позволяет быстро и удобно работать с сетевыми запросами | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreNetKit)
+| [RDDM](https://github.com/surfstudio/ReactiveDataDisplayManager) | Для удобной работы с UI коллекциями | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager.svg?branch=master&style=flat)](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager)
 
 **Deprecated**
 
-| Project | Description | Author |
+| Название | Описание | Автор |
 | :--- | :--- | :--- |
-| [CSL](https://bitbucket.org/surfstudio/cslswift/src/master/) | Network interaction Obj-C | Surf
-| [CSLSwift](https://bitbucket.org/surfstudio/cacheableservicelayer/src) | Network interaction Swift | Surf 
-| [SurfObjcUtils](https://bitbucket.org/surfstudio/surfobjcutils/src/master/) | Set of Obj-C utils | Surf 
+| [CSL](https://bitbucket.org/surfstudio/cslswift/src/master/) | Упрощает сетевое взаимодействие (Obj-C) | Surf
+| [CSLSwift](https://bitbucket.org/surfstudio/cacheableservicelayer/src) | Упрощает сетевое взаимодействие (Swift) | Surf 
+| [SurfObjcUtils](https://bitbucket.org/surfstudio/surfobjcutils/src/master/) | Коллекция утилит на Obj-C | Surf 
 
 ## Forks
-| Project | Motivation |
+| Название | Почему ответвились |
 | :--- | :---- |
-| [Generamba](github.com/surfstudio/Generamba) | For bundler
+| [Generamba](github.com/surfstudio/Generamba) | Для работы с Bundler
+
 # Best practices
-## Project initialization
-- [Xcode-Project-Templates](https://github.com/surfstudio/Xcode-Project-Templates) templates collection for easy project initialization. Generate needed folder structure, needed files e.t.c.
+
+## Инициаллизация проектов
+- [Xcode-Project-Templates](https://github.com/surfstudio/Xcode-Project-Templates) набор шаблонов для упрощения процесса создания проекта. Позваоляет генерировать необходимые папки, файлы и так далее.
+
 ## Code style
-- [Swift Code Style](https://github.com/surfstudio/SwiftCodestyle) - style guides for Swift.
-- [Obj-C Code Style](https://github.com/surfstudio/objective-c-style-guide) - style guides for Objective-C.
+- [Swift Code Style](https://github.com/surfstudio/SwiftCodestyle) - указания по оформлению кода на Swift.
+- [Obj-C Code Style](https://github.com/surfstudio/objective-c-style-guide) - указания по оформлению кода на Obj-C
+
 ## Code generation
-- [Generamba templates](https://github.com/surfstudio/generamba-templates) contains templates collection _(ViewController template, Presenter template and other)_ for Generamba
+- [Generamba templates](https://github.com/surfstudio/generamba-templates) содержит набор шаблонов для генерации кода _(шаблон ViewController, шаблон Presenter и т.д.)_ для Generamba
