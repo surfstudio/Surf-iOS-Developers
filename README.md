@@ -24,7 +24,7 @@ Utility may be is a phone number formatter or simple NSAttributedString wrapper.
 
 For more details see [iOS Utils](https://github.com/surfstudio/iOS-Utils)
 ## Libs
-Library is something bigger then utility. This section contains references to the our open source libraries we develope, support and use
+Library is something bigger then utility. This section contains references to our open source libraries we develope, support and use
 
 | Project | Description | Author | Status |
 | :--- | :--- | :--- | :---: |
