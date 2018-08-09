@@ -25,6 +25,7 @@ If you create new awesome library you may add it to this repo in **Lib** section
   - Build status image in top of file
   - Code smell status in top of file
   - Versioning information
+  - How to install section
 - Repo must be integrated with any CI
 - Repo muts be integrated with any code smell checker
 - Repo must contains at least one stable version
