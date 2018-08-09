@@ -2,6 +2,8 @@
 
 Для того, чтобы добавить что-нибудь в этот репозиторий вы должны быть членом iOS команды Surf
 
+**Работа в этом репозитории ведется на русском языке**
+
 На данный момент для изменений открыты секции:
 - [Libs](https://github.com/surfstudio/iOS_Devs#libs)
 - [Forks](https://github.com/surfstudio/iOS_Devs#forks)
