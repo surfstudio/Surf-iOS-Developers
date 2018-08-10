@@ -51,6 +51,20 @@
 | Название | Почему ответвились |
 | :--- | :---- |
 | [Generamba](github.com/surfstudio/Generamba) | Для работы с Bundler
+| [WSTagsField](https://github.com/surfstudio/WSTagsField) |
+| [Popover](https://github.com/surfstudio/Popover) | Исправили баг с расчетом размеров Popover'а
+| [PluggableApplicationDelegate](https://github.com/surfstudio/PluggableApplicationDelegate)| Поддерживаем |
+| [SwiftTheme](https://github.com/surfstudio/SwiftTheme)| Добавили alpha-канал к представлению цвета в hex |
+| [MWPhotoBrowser](https://github.com/surfstudio/MWPhotoBrowser)| Багфиксинг и поддержка
+| [TLYShyNavBar](https://github.com/surfstudio/TLYShyNavBar) | Поддержка
+| [ICViewPager](https://github.com/surfstudio/ICViewPager) | Доработка и поддержка
+
+**Deprecated**
+
+- [LMGeocoder](https://github.com/surfstudio/LMGeocoder)
+- [iCarousel](https://github.com/surfstudio/iCarousel)
+- [KNSemiModalViewController](https://github.com/surfstudio/KNSemiModalViewController)
+- [Azure ActiveDirectory Obj-C Kit](https://github.com/surfstudio/azure-activedirectory-library-for-objc)
 
 # Best practices
 
