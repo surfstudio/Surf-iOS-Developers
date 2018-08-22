@@ -64,6 +64,8 @@
 | [MWPhotoBrowser](https://github.com/surfstudio/MWPhotoBrowser)| Багфиксинг и поддержка
 | [TLYShyNavBar](https://github.com/surfstudio/TLYShyNavBar) | Поддержка
 | [ICViewPager](https://github.com/surfstudio/ICViewPager) | Доработка и поддержка
+| [NSObject+Rx](https://github.com/surfstudio/NSObject-Rx) | Добавили совместимость с RxSwift ~> 3.1.0
+| [RxGesture](https://github.com/surfstudio/RxGesture) | Понизили deployment target до iOS 8.0
 
 **Deprecated**
 
