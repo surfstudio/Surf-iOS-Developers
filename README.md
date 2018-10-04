@@ -1,5 +1,5 @@
 
-![Surf iOS Team](https://raw.githubusercontent.com/surfstudio/iOS_Dev/master/img/surf_logo.png)
+![Surf iOS Team](https://raw.githubusercontent.com/surfstudio/iOS_Dev/master/img/ios_github.png)
 # Surf iOS
 
 **Содержание**
