@@ -50,7 +50,8 @@
 
 MVP (Model View Presenter) — шаблон проектирования, который используется для построения пользовательского интерфейса.
 
-![surf_mvp_old](https://raw.githubusercontent.com/surfstudio/iOS_Dev/master/img/surf_mvp_old.png)
+![surf_mvp_old](https://github.com/surfstudio/Surf-iOS-Developers/blob/surf_mvp/img/surf_mvp_old.png)
+
 Схема классического MVP - модуля
 
 **View**: отображает данные на экране и оповещает Presenter о действиях пользователя. Пассивен — ~сам никогда не запрашивает данные, только получает их от Presenter.~
@@ -63,14 +64,15 @@ MVP (Model View Presenter) — шаблон проектирования, кот
 Для конфигурирования модулей выделили сущность **Configurator**. Она отвечает за сборку модуля и проставление зависимостей между компонентами.
 **Model** в Surf MVP — это сервисы, которые вызывает **Presenter** для получения данных. Зачастую один сервис решает задачи для работы целого модуля. В сложных случаях приходится взаимодействовать с несколькими.
 
-![surf_mvp_new](https://raw.githubusercontent.com/surfstudio/iOS_Dev/master/img/surf_mvp_new.png)
+![surf_mvp_new](https://github.com/surfstudio/Surf-iOS-Developers/blob/surf_mvp/img/surf_mvp_new.png)
+
 Схема Surf MVP - модуля
 
 ### Взаимодействие между слоями
 
 Каждый слой в MVP отделен от другого протоколом. Ниже — схема слоев и протоколов между ними. Мы отдельно описали каждый протокол.
 
-![surf_mvp_layers](https://raw.githubusercontent.com/surfstudio/iOS_Dev/master/img/surf_mvp_layers.png)
+![surf_mvp_layers](https://github.com/surfstudio/Surf-iOS-Developers/blob/surf_mvp/img/surf_mvp_layers.png)
 
 #### View
 
