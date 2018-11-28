@@ -52,7 +52,7 @@ MVP (Model View Presenter) — шаблон проектирования, кот
 
 ![surf_mvp_old](https://github.com/surfstudio/Surf-iOS-Developers/blob/surf_mvp/img/surf_mvp_old.png)
 
-<center>Схема классического MVP - модуля</center>
+<p align="center">Схема классического MVP - модуля</p>
 
 **View**: отображает данные на экране и оповещает Presenter о действиях пользователя. Пассивен — ~сам никогда не запрашивает данные, только получает их от Presenter.~
 
@@ -66,7 +66,7 @@ MVP (Model View Presenter) — шаблон проектирования, кот
 
 ![surf_mvp_new](https://github.com/surfstudio/Surf-iOS-Developers/blob/surf_mvp/img/surf_mvp_new.png)
 
-<center>Схема Surf MVP - модуля</center>
+<p align="center">Схема Surf MVP - модуля</p>
 
 ### Взаимодействие между слоями
 
