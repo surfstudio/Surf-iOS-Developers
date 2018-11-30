@@ -88,7 +88,7 @@
 
 ## Архитектура
 
-- [Surf MVP](https://github.com/surfstudio/Surf-iOS-Developers/Surf_MVP.md)
+- [Surf MVP](Surf_MVP.md)
 
 ## Кодогенерация
 
