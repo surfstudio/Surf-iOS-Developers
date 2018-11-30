@@ -1,5 +1,6 @@
 
 ![Surf iOS Team](https://raw.githubusercontent.com/surfstudio/iOS_Dev/master/img/ios_github.png)
+
 # Surf iOS
 
 **Содержание**
@@ -77,11 +78,18 @@
 # Best practices
 
 ## Инициаллизация проектов
+
 - [Xcode-Project-Templates](https://github.com/surfstudio/Xcode-Project-Templates) набор шаблонов для упрощения процесса создания проекта. Позваоляет генерировать необходимые папки, файлы и так далее.
 
 ## Code style
+
 - [Swift Code Style](https://github.com/surfstudio/SwiftCodestyle) - указания по оформлению кода на Swift.
 - [Obj-C Code Style](https://github.com/surfstudio/objective-c-style-guide) - указания по оформлению кода на Obj-C
 
+## Архитектура
+
+- [Surf MVP](https://github.com/surfstudio/Surf-iOS-Developers/Surf_MVP.md)
+
 ## Кодогенерация
+
 - [Generamba templates](https://github.com/surfstudio/generamba-templates) содержит набор шаблонов для генерации кода _(шаблон ViewController, шаблон Presenter и т.д.)_ для Generamba
