@@ -608,16 +608,14 @@ Project
             Module1ViewInput.swift
             Module1ViewOutput.swift
             Module1ViewController.xib
-        UserStory2
-          ...
-        Services
-          Service1
-            Service1.swift
-            Requests
-              GetSomething.request
-        ThirdParty
-          SomeThirdPartyFramework
-            SomeDependency.swift
+      UserStory2
+        ...
+    Services
+      Service1
+        Service1.swift
+    ThirdParty
+      SomeThirdPartyFramework
+        SomeDependency.swift
   ProjectTests
     Info.plist
     Helpers.swift
