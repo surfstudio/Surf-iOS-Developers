@@ -3,28 +3,23 @@
 
 # Surf iOS
 
+В этом репозитории собраны все наши библиотеки, утилиты, инструменты, лучшие практики и форки сторонних библиотек которые мы используем в своей повседневной работе.
+
 **Содержание**
-- [Правила работы с репозиторием]()
-- [Pods](#pods)
+- [Библиотеки](#pods)
   - [Utils](#utils)
   - [Libs](#libs)
-  - [Forks](#forks)
 - [Best Practices](#best-practices)
-  - [Инициаллизация проектов](#Инициаллизация-проектов)
+  - [Инициализация проектов](#Инициаллизация-проектов)
   - [Code style](#code-style)
+  - [Архитектура](#Архитектура)
   - [Кодогенерация](#Кодогенерация)
+- [Forks](#forks)
+- [Правила работы с репозиторием](#Правила-работы-с-репозиторием)
 
-# Правила работы с репозиторием
+# Библиотеки
 
-Репозиторий создан с целью агрегирования всех собственных библиотек, утилит, инструментов, форков сторонних библиотек и различных практик которые мы используем в своей работе. 
-
-**Для внесения изменений необходимо быть членом iOS команды Surf**
-
-Более детально правила описаны [**здесь**](https://github.com/surfstudio/iOS_Devs/blob/master/CONTRIBUTING.md)
-
-# Pods
-
-Содержит описание и ссылки на библиотеки с открытым исходным кодом. 
+Здесь находятся описание и ссылки на наши Pod-библиотеки с открытым исходным кодом. 
 Любую из этих библиотек можно установить к себе в проект с помощью `CocoaPods`
 
 ## Utils
@@ -54,7 +49,26 @@
 | [CSLSwift](https://bitbucket.org/surfstudio/cacheableservicelayer/src) | Упрощает сетевое взаимодействие (Swift) | Surf 
 | [SurfObjcUtils](https://bitbucket.org/surfstudio/surfobjcutils/src/master/) | Коллекция утилит на Obj-C | Surf 
 
-## Forks
+# Best practices
+
+## Инициализация проектов
+
+- [Xcode-Project-Templates](https://github.com/surfstudio/Xcode-Project-Templates) – набор шаблонов для упрощения процесса создания проекта. Позваоляет генерировать необходимые папки, файлы и так далее.
+
+## Code style
+
+- [Swift Code Style](https://github.com/surfstudio/SwiftCodestyle) - указания по оформлению кода на Swift.
+- [Obj-C Code Style](https://github.com/surfstudio/objective-c-style-guide) - указания по оформлению кода на Obj-C
+
+## Архитектура
+
+- [Surf MVP](Surf_MVP.md) – наш стандарт разработки UI-слоя приложений
+
+## Кодогенерация
+
+- [Generamba templates](https://github.com/surfstudio/generamba-templates) – содержит набор шаблонов для генерации кода _(шаблон ViewController, шаблон Presenter и т.д.)_ для Generamba
+
+# Forks
 | Название | Почему ответвились |
 | :--- | :---- |
 | [Generamba](github.com/surfstudio/Generamba) | Для работы с Bundler
@@ -75,21 +89,10 @@
 - [KNSemiModalViewController](https://github.com/surfstudio/KNSemiModalViewController)
 - [Azure ActiveDirectory Obj-C Kit](https://github.com/surfstudio/azure-activedirectory-library-for-objc)
 
-# Best practices
+# Правила работы с репозиторием
 
-## Инициаллизация проектов
+Репозиторий создан с целью агрегирования всех собственных библиотек, утилит, инструментов, форков сторонних библиотек и различных практик которые мы используем в своей работе. 
 
-- [Xcode-Project-Templates](https://github.com/surfstudio/Xcode-Project-Templates) набор шаблонов для упрощения процесса создания проекта. Позваоляет генерировать необходимые папки, файлы и так далее.
+**Для внесения изменений необходимо быть членом iOS команды Surf**
 
-## Code style
-
-- [Swift Code Style](https://github.com/surfstudio/SwiftCodestyle) - указания по оформлению кода на Swift.
-- [Obj-C Code Style](https://github.com/surfstudio/objective-c-style-guide) - указания по оформлению кода на Obj-C
-
-## Архитектура
-
-- [Surf MVP](Surf_MVP.md)
-
-## Кодогенерация
-
-- [Generamba templates](https://github.com/surfstudio/generamba-templates) содержит набор шаблонов для генерации кода _(шаблон ViewController, шаблон Presenter и т.д.)_ для Generamba
+Более детально правила описаны [**здесь**](https://github.com/surfstudio/iOS_Devs/blob/master/CONTRIBUTING.md)
