@@ -53,7 +53,7 @@
 
 ## Инициализация проектов
 
-- [Xcode-Project-Templates](https://github.com/surfstudio/Xcode-Project-Templates) – набор шаблонов для упрощения процесса создания проекта. Позваоляет генерировать необходимые папки, файлы и так далее.
+- [Xcode-Project-Templates](https://github.com/surfstudio/Xcode-Project-Templates) – набор шаблонов для упрощения процесса создания проекта. Позволяет генерировать необходимые папки, файлы и так далее.
 
 ## Code style
 
