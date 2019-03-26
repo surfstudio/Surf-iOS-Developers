@@ -81,6 +81,7 @@
 | [ICViewPager](https://github.com/surfstudio/ICViewPager) | Доработка и поддержка
 | [NSObject+Rx](https://github.com/surfstudio/NSObject-Rx) | Добавили совместимость с RxSwift ~> 3.1.0
 | [RxGesture](https://github.com/surfstudio/RxGesture) | Понизили deployment target до iOS 8.0
+| [OpalImagePicker](https://github.com/surfstudio/OpalImagePicker) | Доработка и поддержка
 
 **Deprecated**
 
