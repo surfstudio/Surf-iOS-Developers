@@ -75,13 +75,6 @@
 | [RxGesture](https://github.com/surfstudio/RxGesture) | Понизили deployment target до iOS 8.0
 | [OpalImagePicker](https://github.com/surfstudio/OpalImagePicker) | Доработка и поддержка
 
-**Deprecated**
-
-- [LMGeocoder](https://github.com/surfstudio/LMGeocoder)
-- [iCarousel](https://github.com/surfstudio/iCarousel)
-- [KNSemiModalViewController](https://github.com/surfstudio/KNSemiModalViewController)
-- [Azure ActiveDirectory Obj-C Kit](https://github.com/surfstudio/azure-activedirectory-library-for-objc)
-
 # Правила работы с репозиторием
 
 Репозиторий создан с целью агрегирования всех собственных библиотек, утилит, инструментов, форков сторонних библиотек и различных практик которые мы используем в своей работе. 
