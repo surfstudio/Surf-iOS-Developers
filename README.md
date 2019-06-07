@@ -40,6 +40,8 @@
 | [CoreEvents](https://github.com/surfstudio/CoreEvents) | C#-подобные события | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreEvents)
 | [CoreNetKit](https://github.com/surfstudio/CoreNetKit) | Позволяет быстро и удобно работать с сетевыми запросами | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreNetKit)
 | [RDDM](https://github.com/surfstudio/ReactiveDataDisplayManager) | Для удобной работы с UI коллекциями | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager.svg?branch=master&style=flat)](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager)
+| [TextFieldsCatalog](https://github.com/chausovSurfStudio/TextFieldsCatalog) | Коллекция богатых и хорошо кастомизируемых текстовых полей | [chausovSurfStudio](https://github.com/chausovSurfStudio) | [![Build Status](https://travis-ci.org/chausovSurfStudio/TextFieldsCatalog.svg?branch=master&style=flat)](https://travis-ci.org/chausovSurfStudio/TextFieldsCatalog)
+
 
 # Best practices
 
