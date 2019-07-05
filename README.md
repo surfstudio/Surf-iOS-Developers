@@ -6,50 +6,24 @@
 В этом репозитории собраны все наши библиотеки, утилиты, инструменты, лучшие практики и форки сторонних библиотек которые мы используем в своей повседневной работе.
 
 **Содержание**
-- [Библиотеки](#Библиотеки)
-  - [Utils](#utils)
-  - [Libs](#libs)
-- [Best Practices](#best-practices)
+- [Лучшие практики](#Лучшие-практики)
   - [Инициализация проектов](#Инициализация-проектов)
-  - [Code style](#code-style)
+  - [Кодстайл](#Кодстайл)
   - [Архитектура](#Архитектура)
   - [Кодогенерация](#Кодогенерация)
+- [Open Source](#open-source)
+  - [Утилиты](#Утилиты)
+  - [Библиотеки](#Библиотеки)
 - [Forks](#forks)
 - [Правила работы с репозиторием](#Правила-работы-с-репозиторием)
 
-# Библиотеки
-
-Здесь находятся описание и ссылки на наши Pod-библиотеки с открытым исходным кодом. 
-Любую из этих библиотек можно установить к себе в проект с помощью `CocoaPods`
-
-## Utils
-
-Содержит набор небольших утилит. 
-Все утилиты находятся в одном репозитории, но разбиты по разным `subspecs`
-
-Утилитой может быть форматер телефонных номеров или обертка над `NSAttributedString`
-
-Для получения более подробной информации [iOS Utils](https://github.com/surfstudio/iOS-Utils)
-
-## Libs
-
-Эта секция содержит короткое описание и ссылки на репозитории библиотек которые мы активно разрабатываем, поддерживаем и используем в своих проектах. 
-
-| Название | Описание | Автор | Статус |
-| :--- | :--- | :--- | :---: |
-| [CoreEvents](https://github.com/surfstudio/CoreEvents) | C#-подобные события | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreEvents)
-| [CoreNetKit](https://github.com/surfstudio/CoreNetKit) | Позволяет быстро и удобно работать с сетевыми запросами | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreNetKit)
-| [RDDM](https://github.com/surfstudio/ReactiveDataDisplayManager) | Для удобной работы с UI коллекциями | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager.svg?branch=master&style=flat)](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager)
-| [TextFieldsCatalog](https://github.com/chausovSurfStudio/TextFieldsCatalog) | Коллекция богатых и хорошо кастомизируемых текстовых полей | [chausovSurfStudio](https://github.com/chausovSurfStudio) | [![Build Status](https://travis-ci.org/chausovSurfStudio/TextFieldsCatalog.svg?branch=master&style=flat)](https://travis-ci.org/chausovSurfStudio/TextFieldsCatalog)
-
-
-# Best practices
+# Лучшие практики
 
 ## Инициализация проектов
 
 - [Xcode-Project-Templates](https://github.com/surfstudio/Xcode-Project-Templates) – набор шаблонов для упрощения процесса создания проекта. Позволяет генерировать необходимые папки, файлы и так далее.
 
-## Code style
+## Кодстайл
 
 - [Swift Code Style](https://github.com/surfstudio/SwiftCodestyle) - указания по оформлению кода на Swift.
 - [Obj-C Code Style](https://github.com/surfstudio/objective-c-style-guide) - указания по оформлению кода на Obj-C
@@ -61,6 +35,33 @@
 ## Кодогенерация
 
 - [Generamba templates](https://github.com/surfstudio/generamba-templates) – содержит набор шаблонов для генерации кода _(шаблон ViewController, шаблон Presenter и т.д.)_ для Generamba
+
+# Open Source
+
+Здесь находятся описание и ссылки на наши Pod-библиотеки с открытым исходным кодом. 
+Любую из этих библиотек можно установить к себе в проект с помощью `CocoaPods`
+
+## Утилиты
+
+Содержит набор небольших утилит. 
+Все утилиты находятся в одном репозитории, но разбиты по разным `subspecs`
+
+Утилитой может быть форматер телефонных номеров или обертка над `NSAttributedString`
+
+Для получения более подробной информации [iOS Utils](https://github.com/surfstudio/iOS-Utils)
+
+## Библиотеки
+
+Эта секция содержит короткое описание и ссылки на репозитории библиотек которые мы активно разрабатываем, поддерживаем и используем в своих проектах. 
+
+[Как добавить свою библиотеку](https://github.com/surfstudio/Surf-iOS-Developers/blob/master/ADD_NEW_LIB_TUTORIAL.md)
+
+| Название | Описание | Автор | Статус |
+| :--- | :--- | :--- | :---: |
+| [CoreEvents](https://github.com/surfstudio/CoreEvents) | C#-подобные события | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreEvents)
+| [CoreNetKit](https://github.com/surfstudio/CoreNetKit) | Позволяет быстро и удобно работать с сетевыми запросами | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreNetKit)
+| [RDDM](https://github.com/surfstudio/ReactiveDataDisplayManager) | Для удобной работы с UI коллекциями | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager.svg?branch=master&style=flat)](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager)
+| [TextFieldsCatalog](https://github.com/chausovSurfStudio/TextFieldsCatalog) | Коллекция богатых и хорошо кастомизируемых текстовых полей | [chausovSurfStudio](https://github.com/chausovSurfStudio) | [![Build Status](https://travis-ci.org/chausovSurfStudio/TextFieldsCatalog.svg?branch=master&style=flat)](https://travis-ci.org/chausovSurfStudio/TextFieldsCatalog)
 
 # Forks
 | Название | Почему ответвились |
