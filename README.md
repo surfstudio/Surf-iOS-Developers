@@ -62,7 +62,7 @@
 | [NodeKit](https://github.com/surfstudio/NodeKit) | Позволяет быстро и удобно работать с сетевыми запросами | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/NodeKit.svg?branch=master)](https://travis-ci.org/surfstudio/NodeKit)
 | [RDDM](https://github.com/surfstudio/ReactiveDataDisplayManager) | Для удобной работы с UI коллекциями | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager.svg?branch=master&style=flat)](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager)
 | [TextFieldsCatalog](https://github.com/chausovSurfStudio/TextFieldsCatalog) | Коллекция богатых и хорошо кастомизируемых текстовых полей | [chausovSurfStudio](https://github.com/chausovSurfStudio) | [![Build Status](https://travis-ci.org/chausovSurfStudio/TextFieldsCatalog.svg?branch=master&style=flat)](https://travis-ci.org/chausovSurfStudio/TextFieldsCatalog)
-| [MaskInterpreter](https://github.com/surfstudio/MaskInterpreter) | Интерпритатор масок для пользовательского ввода | LastSprint](https://github.com/LastSprint) | [![Actions Status](https://github.com/LastSprint/MaskInterpreter/workflows/CI/badge.svg)](https://github.com/LastSprint/MaskInterpreter/actions)
+| [MaskInterpreter](https://github.com/surfstudio/MaskInterpreter) | Интерпритатор масок для пользовательского ввода | [LastSprint](https://github.com/LastSprint) | [![Actions Status](https://github.com/LastSprint/MaskInterpreter/workflows/CI/badge.svg)](https://github.com/LastSprint/MaskInterpreter/actions)
 
 # Forks
 | Название | Почему ответвились |
