@@ -68,7 +68,7 @@
 | Название | Почему ответвились |
 | :--- | :---- |
 | [Generamba](github.com/surfstudio/Generamba) | Для работы с Bundler
-| [WSTagsField](https://github.com/surfstudio/WSTagsField) |
+| [WSTagsField](https://github.com/surfstudio/WSTagsField) | Исправили краш и поддержка
 | [Popover](https://github.com/surfstudio/Popover) | Исправили баг с расчетом размеров Popover'а
 | [PluggableApplicationDelegate](https://github.com/surfstudio/PluggableApplicationDelegate)| Поддерживаем |
 | [SwiftTheme](https://github.com/surfstudio/SwiftTheme)| Добавили alpha-канал к представлению цвета в hex |
