@@ -11,6 +11,7 @@
   - [Кодстайл](#Кодстайл)
   - [Архитектура](#Архитектура)
   - [Кодогенерация](#Кодогенерация)
+  - [Инструменты](#Инструменты)
 - [Open Source](#open-source)
   - [Утилиты](#Утилиты)
   - [Библиотеки](#Библиотеки)
@@ -35,6 +36,10 @@
 ## Кодогенерация
 
 - [Generamba templates](https://github.com/surfstudio/generamba-templates) – содержит набор шаблонов для генерации кода _(шаблон ViewController, шаблон Presenter и т.д.)_ для Generamba
+
+## Инструменты
+
+- [TargetsCheck](https://github.com/chausovSurfStudio/TargetsCheck) - скрипт для проверки консистентности проекта, содержащего несколько Targets
 
 # Open Source
 
