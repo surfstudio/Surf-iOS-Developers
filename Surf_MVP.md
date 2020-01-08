@@ -444,7 +444,6 @@ templates:
 - {name: surf_mvp_module}
 ```
 
-
 Теперь для генерации модуля достаточно перейти в Terminal
 в папку проекта и прописать` generamba gen YourModuleName surf_mvp_module.`
 
@@ -550,13 +549,13 @@ Project
 
 **Плохой пример:**
 
-```
+```swift
 func loginButtonClick()
 ```
 
 **Хороший пример:**
 
-```
+```swift
 func login()
 ```
 
@@ -569,7 +568,7 @@ func reloadTable()
 ```
 
 **Хороший пример:**
-```
+```swift
 func reload()
 ```
 
@@ -577,13 +576,13 @@ func reload()
 
 **И еще один плохой пример:**
 
-```
+```swift
 func configureTableViewAdapter(with: SomeParameter)
 ```
 
 **Хороший пример:**
 
-```
+```swift
 func configure(with: SomeParameter)
 ```
 
@@ -613,13 +612,13 @@ func showEditProfileModule()
 
 **Ещё плохой пример:**
 
-```
+```swift
 func showConfirmationAlert()
 ```
 
 **Хороший пример:**
 
-```
+```swift
 func showConfirmationModule()
 ```
 
