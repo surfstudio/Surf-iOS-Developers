@@ -61,7 +61,6 @@
 ![surf_mvp_old](/img/surf_mvp_old.jpeg)
 
 <p align="center">Схема классического MVP - модуль</p>
-
 **View** – отображает данные на экране и оповещает **Presenter** о действиях пользователя. Пассивна — **View** никогда не запрашивает данные, только получает их от **Presenter**.
 
 **Presenter** – получает от **View** информацию о действиях пользователя и реагирует на них. Передает события в **Model** для обновления или обработки внутри себя. Ничего не должен знать о UIKit, за исключением UIImage.
@@ -79,14 +78,12 @@
 ![surf_mvp_new](/img/surf_mvp_new.jpeg)
 
 <p align="center">Схема Surf MVP - модуль</p>
-
 ### Взаимодействие между слоями
 
 Основная особенность **SurfMVP**  —  каждый слой в MVP отделен от другого протоколом. На изображении видно схему слоев и связь протоколов между ними. Протоколы нужны, чтобы каждый слой был обособлен от другого и в теории легко заменялся. Каждый из слоев не должен раскрывать детали реализации. 
 
 ![surf_mvp_layers](/img/surf_mvp_layers.jpeg)
 <p align="center">Схема слоев SurfMVP</p>
-
 **Рассмотрим их отдельно:** 
 
 ## View
@@ -262,35 +259,24 @@ final class ProfileModuleConfigurator {
 
 
 
-## Лучшие практики
+# Лучшие практики
 
-### Работа с коллекциями
-#### Адаптеры
+## Работа с коллекциями
+### Адаптеры
 Во многих приложениях более половины экранов — коллекции *UITableView* или *UICollectionView*. Важно выбрать правильный подход разработки данных элементов, чтобы не проиграть в скорости и поддержке готовых решений.
 
-Реализация *UITableViewDelegate* и *UITableViewDataSource* (или *UICollectionViewDelegate* и *UICollectionViewDataSource*)  **ViewController** не соответствует [принципу единственной ответственности](https://ru.wikipedia.org/wiki/Принцип_единственной_ответственности). Мы выделили отдельный объект **Adapter**, который исполняет эти протоколы. 
+Из-за того, что *UITableViewDelegate* и *UITableViewDataSource* (или UICollectionViewDelegate и UICollectionViewDataSource) реализованные **ViewController-ом** не соответствует [принципу единственной ответственности](https://ru.wikipedia.org/wiki/Принцип_единственной_ответственности). Для того, чтобы решить эту проблему был выделен отдельный объект **Adapter**, который реализует эти протоколы.  
 
 **Adapter** избавляет **UIViewController** от знания о внутреннем устройстве коллекции.
-**Adapter** создается в **Configurator** и хранится во **View**. **View** получает необходимые данные. Далее она передает в **Adapter** ссылку на коллекцию для регистрации ячеек и информацию для запуска коллекции.
-Для передачи действий из ячеек и при нажатии на них создается специальный протокол **AdapterOutput**.
+**Adapter** создается и хранится во **View**. **View** получает необходимые данные. Далее она передает в **Adapter** ссылку на коллекцию для регистрации ячеек и информацию для запуска коллекции.
 
-Пример конфигурации хорошо знакомого нам модуля профиля, с созданием адаптера.
+Для передачи действий из ячеек и при нажатии на них есть два разных подхода: 
 
-```swift
-func configure() -> ProfileViewController {
-	let view = ProfileViewController.controller()
-	let presenter = ProfilePresenter()
-	let router = ProfileRouter()
-	let profileViewAdapter = ProfileViewAdapter(output: presenter)
-	presenter.view = view
-	presenter.router = router
-      router.view = view
-      view.output = presenter
-      view.adapter = profileViewAdapter
+* Создается отдельный протокол **AdapterOutput** 
+* Используются closure или [Events](https://github.com/surfstudio/CoreEvents)
 
-      return view
-}
-```
+> Используемый подход разнится в зависимости от проекта. Следует уточнять у лида проекта.
+
 
 Пример output-a для модуля профиля.
 
@@ -307,16 +293,22 @@ protocol ProfileViewAdapterOutput {
 Конфигурацию ячеек нужно производить внутри самих ячеек. Разберем на примере:
 
 ```swift
-let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCell.nameOfClass, for: indexPath) as! ProfileCell
+guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCell.nameOfClass, for: indexPath) as? ProfileCell else {
+    return UITableViewCell()
+}
 cell.configure(with: subscription)
 return cell
 ```
 
 Мы не открываем **Adapter** внутреннее устройство ячейки. Только предоставляем набор методов для ее конфигурации.
 
-#### ReactiveDataDisplayManager
+> **Внимание!** данный метод постепенно заменяется на RDDM на всех проектах. Однако не исключается возможность комбинировать Adapter+RDDM.
 
-Другой способ реализации протоколов коллекций — использование библиотеки [ReactiveDataDisplayManger](https://github.com/LastSprint/ReactiveDataDisplayManager). Она предоставляет интерфейс **DDM** (Data Display Manager). С ним можно конфигурировать коллекции по элементам при помощи генераторов ячеек.
+### ReactiveDataDisplayManager
+
+В большом количестве проектов студии используется имеено этот подход с RDDM. 
+
+Библиотека [ReactiveDataDisplayManger](https://github.com/LastSprint/ReactiveDataDisplayManager) предоставляет интерфейс **DDM** (Data Display Manager). Используя данный подход можно конфигурировать коллекции по элементам при помощи генераторов ячеек.
 Это удобно для коллекций с разнородными ячейками. Можно последовательно передать блоки в **DDM** и не писать огромный switch-case.
 Более подробно о подходе в [репозитории проекта](https://github.com/LastSprint/ReactiveDataDisplayManager).
 
@@ -336,8 +328,8 @@ SomeModuleRouter.swift
 func showMessageModule(with message: String) {
     let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
     let cancelAction = UIAlertAction(title: nil, style: .cancel, handler: nil)
-    alertController(cancelAction)
-    self.present(alerController, animated: true, completion: nil)
+    alertController.addAction(cancelAction)
+    self.present(alertController, animated: true, completion: nil)
 }
 ```
 
@@ -395,7 +387,9 @@ final class ActionsWithBankCardAlertViewController: UIAlertController {
 }
 ```
 
-### Кодогенерация
+
+
+# Кодогенерация
 
 Создание нового модуля достаточно трудоемкая задача. Для того, чтобы это сделать, нужно:
 * Четыре новых класса (*Configurator*, *Router*, *Presenter*, *ViewController*)
