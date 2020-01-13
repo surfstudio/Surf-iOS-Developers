@@ -145,7 +145,6 @@ protocol ProfileViewOutput: class {
 }
 ```
 
-##### Правила наименования методов ViewInput и ViewOutput
 <details>
 <summary>Правила наименования методов ViewInput и ViewOutput</summary>
 
