@@ -147,6 +147,7 @@ protocol ProfileViewOutput: class {
 
 ##### Правила наименования методов ViewInput и ViewOutput
 <details>
+<summary>Правила наименования методов ViewInput и ViewOutput</summary>
 
 В протоколах *ViewInput* и *ViewOutput* многие ошибаются в наименовании методов, раскрывая дeтали реализации **View**.
 
