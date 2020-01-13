@@ -280,7 +280,6 @@ protocol ProfileRouterInput {
 }
 ```
 
-##### Правила наименования методов в протоколе RouterInput
 
 <details>
 
