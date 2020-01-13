@@ -555,6 +555,7 @@ templates:
 Подход создания ничем не отличается от внедрения в уже существующий. В качестве структуры проекта используйте [Xcode-шаблон](https://github.com/surfstudio/Xcode-Project-Templates). Ниже структура проекта. 
 
 <details>
+<summary>Структура проекта</summary>
 
 ```
 Project
