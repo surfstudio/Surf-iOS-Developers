@@ -1,13 +1,14 @@
 # Surf MVP
 
 **Содержание**
+
 - [Предисловие](#Предисловие)
 - [Описание архитектуры](#Описание-архитектуры)
-  - [Описание](#Описание)
   - [Взаимодействие между слоями](#Взаимодействие-между-слоями)
-    - [View](#View)
+    - [View](#view)
         - [ViewInput](#ViewInput)
         - [ViewOutput](#ViewOutput)
+		- [Правила наименования методов ViewInput и ViewOutput](#правила-наименования-методов-viewinput-и-viewoutput)
         - [ModuleTransitionable](#ModuleTransitionable)
             - [Реализация кастомного перехода](#Реализация-кастомного-перехода)
     - [Presenter](#Presenter)
@@ -15,18 +16,19 @@
         - [ModuleOutput](#ModuleOutput)
     - [Router](#Router)
         - [RouterInput](#RouterInput)
+		- [Правила наименования методов в протоколе RouterInput](#правила-наименования-методов-в-протоколе-routerinput)
     - [Configurator](#Configurator)
 - [Лучшие практики](#Лучшие-практики)
   - [Работа с коллекциями](#Работа-с-коллекциями)
     - [Адаптеры](#Адаптеры)
     - [ReactiveDataDisplayManger](#ReactiveDataDisplayManager)
   - [Взаимодействие с UIAlertController](#Взаимодействие-с-UIAlertController)
-  - [Кодогенерация](#Кодогенерация)
+- [Кодогенерация](#Кодогенерация)
 - [Внедрение Surf MVP](#Внедрение-Surf-MVP)
   - [Surf MVP в существующем проекте](#Surf-MVP-в-существующем-проекте)
   - [Surf MVP в новом проекте](#Surf-MVP-в-новом-проекте)
 
-## Предисловие
+# Предисловие
 
 При разработке и поддержке большого количества приложений возникает много сложностей. Они связаны с организацией кодовой базы и её обменом между приложениями.
 
@@ -36,54 +38,70 @@
 
 Шаблон **MVP** — наш стандарт разработки UI-слоя приложений. Он решает следующие проблемы создания и поддержки качественных продуктов:
 * **Тестируемость** — в MVP бизнес-логика отделена от ViewController и закрыта протоколами, поэтому она отлично покрывается тестами.
+
 * **Переиспользуемость** — в MVP модули обособлены друг от друга. Их можно легко переиспользовать внутри одного и в разных приложениях.
+
 * **Разделение обязанностей** — в MVP все обязанности четко расписаны. Каждый компонент модуля отвечает за конкретную работу. Это позволяет сократить количество строк кода на класс.
 
-	Мы использовали сервис-ориентированную архитектуру **SOA** (Service-Oriented-Architecture) для реализации слоя бизнес-логики. Вот какие проблемы она решает:
+### Слой бизнес-логики
+
+Для реализации бизнес-логики используется сервис-ориентированную архитектуру **SOA** (Service-Oriented-Architecture). Вот какие проблемы она решает:
+
 * **Тестируемость** — SOA хорошо подходит для unit-тестирования, потому что сервис разбит на отдельные слои. Каждый из них отвечает за определенную функцию. Благодаря этому его можно протестировать отдельно. SOA выполняет работу с core-компонентами. Теперь их не нужно тестировать.
+
 * **Переиспользуемость** — в сервисах содержатся части бизнес-логики. Их можно легко встроить в разные приложения.
+
 * **Разделение обязанностей** — сервисы четко разделяют обязанности доступа к сети, к базе из промежуточных слоев.
 
 Все подходы к архитектуре основаны на идеях Clean Architecture и SOLID  Роберта Мартина.
 
-## Описание архитектуры
+# Описание архитектуры
 
-### Описание
+В основе архитектуры SurfMVP лежит классический MVP (Model View Presenter) — шаблон проектирования, который используется для построения пользовательского интерфейса.
 
-MVP (Model View Presenter) — шаблон проектирования, который используется для построения пользовательского интерфейса.
+![surf_mvp_old](/img/surf_mvp_old.jpeg)
 
-![surf_mvp_old](https://github.com/surfstudio/Surf-iOS-Developers/blob/surf_mvp/img/surf_mvp_old.png)
+<p align="center">Схема классического MVP - модуль</p>
 
-<p align="center">Схема классического MVP - модуля</p>
 
-**View**: отображает данные на экране и оповещает Presenter о действиях пользователя. Пассивен — сам никогда не запрашивает данные, только получает их от Presenter.
+**View** – отображает данные на экране и оповещает **Presenter** о действиях пользователя. Пассивна — **View** никогда не запрашивает данные, только получает их от **Presenter**.
 
-**Presenter**: получает от **View** информацию о действиях пользователя и реагирует на них. Передает события в модель для обновления или обработки внутри себя. Ничего не должен знать о UIKit, за исключением UIImage.
+**Presenter** – получает от **View** информацию о действиях пользователя и реагирует на них. Передает события в **Model** для обновления или обработки внутри себя. Ничего не должен знать о UIKit, за исключением UIImage.
 
-**Model**: заключает в себе всю бизнес-логику, необходимую для работы модуля.
+**Model** – заключает в себе всю бизнес-логику, необходимую для работы модуля.
 
-Мы заметили проблемы при переходе между модулями в iOS-приложениях. В Surf MVP выделили сущность **Router**, которая осуществляет переходы между модулями.
-Для конфигурирования модулей выделили сущность **Configurator**. Она отвечает за сборку модуля и проставление зависимостей между компонентами.
-**Model** в Surf MVP — это сервисы, которые вызывает **Presenter** для получения данных. Зачастую один сервис решает задачи для работы целого модуля. В сложных случаях приходится взаимодействовать с несколькими.
+#### Что мы добавили?
 
-![surf_mvp_new](https://github.com/surfstudio/Surf-iOS-Developers/blob/surf_mvp/img/surf_mvp_new.png)
+* Теперь за сборку отдельного модуля отвечает сущность **Configurator**, она инициализирует все необходимые компоненты и отвечает за простановку зависимостей между ними. 
 
-<p align="center">Схема Surf MVP - модуля</p>
+* Мы заметили некоторые проблемы при переходах между экранами в iOS приложениях. Большое количество логики по формированию новых экранов перед переходом сосредотачивается непосредственно во UIViewController, нам показалось это не совсем правильным, поэтому первым делом мы выделили отдельную сущность **Router**, которая отвечает за осуществление переходов между экранами в приложении. 
+
+* **Model** в SurfMVP – это сервисы, которые вызывает Presenter для получения данных. Зачастую, один сервис решает задачи для работы целого модуля, однако в сложных ситуациях приходится взаимодействовать с несколькими. 
+
+![surf_mvp_new](/img/surf_mvp_new.jpeg)
+
+<p align="center">Схема Surf MVP - модуль</p>
+
 
 ### Взаимодействие между слоями
 
-Каждый слой в MVP отделен от другого протоколом. Ниже — схема слоев и протоколов между ними. Мы отдельно описали каждый протокол.
+Основная особенность **SurfMVP**  —  каждый слой в MVP отделен от другого протоколом. На изображении видно схему слоев и связь протоколов между ними. Протоколы нужны, чтобы каждый слой был обособлен от другого и в теории легко заменялся. Каждый из слоев не должен раскрывать детали реализации. 
 
-![surf_mvp_layers](https://github.com/surfstudio/Surf-iOS-Developers/blob/surf_mvp/img/surf_mvp_layers.png)
+![surf_mvp_layers](/img/surf_mvp_layers.jpeg)
+<p align="center">Схема слоев SurfMVP</p>
 
-#### View
+
+**Рассмотрим их отдельно:** 
+
+## View
 
 **View** заключает в себе логику отображения и заполнения себя данными. Передает в **Presenter** все пользовательские действия.
 
-##### ViewInput
 
-– реализуется непосредственно **View**, ссылку держит **Presenter**.
-Описывает методы, при помощи которых **Presenter** управляет отображением.
+
+### ViewInput
+
+**ViewInput** – реализует сама **View**, ссылку держит **Presenter**. Данный протокол описывает методы, при помощи которых **Presenter** может управлять **View**, передавать данные, изменять состояния и так далее. 
 
 Пример **ViewInput** некоторой view, которая отображает профиль пользователя и его абонемент.
 
@@ -104,10 +122,11 @@ protocol ProfileViewInput: class {
 
 > Методы конфигурирования View с помощью какого-то параметра лучше называть, как в примере выше. Это необходимо для стандартизации.
 
-##### ViewOutput
 
-– реализуется **Presenter**, ссылку держит **View**. 
-Описывает набор действий, которые могут произойти во **View** и методы жизненного цикла для оповещения **Presenter**.
+
+### ViewOutput
+
+**ViewOutput** – реализует **Presenter**, ссылку на него держит **View**. Протокол описывает набор действий, которые могут произойти во **View**, и методы жизненного цикла, например, события взаимодействия пользователя с экраном.
 
 Пример **ViewOutput** уже знакомой нам view — на ней пользователь может перезагрузить данные или отредактировать профиль.
 
@@ -126,18 +145,20 @@ protocol ProfileViewOutput: class {
 }
 ```
 
-**Замечание**
+<details>
+<summary>Правила наименования методов ViewInput и ViewOutput</summary>
+
 В протоколах *ViewInput* и *ViewOutput* многие ошибаются в наименовании методов, раскрывая дeтали реализации **View**.
 
 **Плохой пример:**
 
-```
+```swift
 func loginButtonClick()
 ```
 
 **Хороший пример:**
 
-```
+```swift
 func login()
 ```
 
@@ -150,7 +171,7 @@ func reloadTable()
 ```
 
 **Хороший пример:**
-```
+```swift
 func reload()
 ```
 
@@ -158,66 +179,41 @@ func reload()
 
 **И еще один плохой пример:**
 
-```
+```swift
 func configureTableViewAdapter(with: SomeParameter)
 ```
 
 **Хороший пример:**
 
-```
+```swift
 func configure(with: SomeParameter)
 ```
 
 > Мы не раскрываем реализацию view **Presenter**-у. Он не знает, как устроена **View**. Он видит набор методов взаимодействия. Вводя метод *configureTableViewAdapter*, мы говорили ему, что View содержит таблицу.  
 
-##### ModuleTransitionable
 
-– реализуется **View**, ссылку держит **Router**. Это единственный “базовый” протокол в Surf MVP. Он нужен для того, чтобы предоставить **Router** набор методов для работы с навигацией по приложению.
+	
+</details>
 
-```swift
-protocol ModuleTransitionable: class {
-    func showModule(_ module: UIViewController)
-    func dismissView(animated: Bool, completion: (() -> Void)?)
-    func presentModule(_ module: UIViewController, animated: Bool, completion: (() -> Void)?)
-    func pop(animated: Bool)
-    func push(module: UIViewController, animated: Bool)
-}
 
-extension ModuleTransitionable where Self: UIViewController {
+### ModuleTransitionable
 
-    func showModule(_ module: UIViewController) {
-        self.show(module, sender: nil)
-    }
+**ModuleTransitionable** – данный протокол реализуется **View**, ссылку на него держит **Router**. Это единственный «базовый» протокол в **SurfMVP**. Он нужен для того, чтобы предоставить Router набор методов для работы с навигацией по приложению. 
 
-    func dismissView(animated: Bool, completion: (() -> Void)?) {
-        self.presentingViewController?.dismiss(animated: animated, completion: completion)
-    }
+Реализацию можно посмотреть в [шаблонах проектов.](https://github.com/surfstudio/Xcode-Project-Templates/blob/master/Surf%20MVP%20Application.xctemplate/Support/ModuleTrasitionable.swift) **Рекомендуется инициализировать проект из шаблона, а не копировать файл.**
 
-    func presentModule(_ module: UIViewController, animated: Bool, completion: (() -> Void)?) {
-        self.present(module, animated: animated, completion: completion)
-    }
-
-    func pop(animated: Bool) {
-        self.navigationController?.popViewController(animated: animated)
-    }
-
-    func push(module: UIViewController, animated: Bool) {
-        self.navigationController?.pushViewController(module, animated: animated)
-    }
-}
-```
-
-Так как у протокола есть базовая реализация — все базовые методы отображения не нужно выполнять каждый раз.
+Так как у протокола есть базовая реализация — все базовые методы отображения не нужно реализовывать каждый раз.
 
 ###### Реализация кастомного перехода
 
 Если необходимо создать кастомный переход между модулями:
-1) Создать свой протокол **CustomModuleTransitionable**
-2) Заимплементить им протокол **ModuleTransitionable**
-3) Реализовать **View**
-4) Не забыть поменять ссылку в **Router**
 
-Пример реализации кастомного перехода
+* Создать свой протокол **CustomModuleTransitionable**
+* Заимплементить им протокол **ModuleTransitionable**
+* Реализовать **View**
+* Не забыть поменять ссылку в **Router**
+
+Пример реализации кастомного перехода:
 
 ```swift
 protocol CustomModuleTransitionable: class, ModuleTransitionable {
@@ -231,15 +227,17 @@ extension CustomModuleTransitionable  where Self: UIViewController {
 }
 ```
 
-#### Presenter
+
+
+## Presenter
 
 **Presenter** — управляющий элемент модуля. Он получает данные из **Model** и преобразует их в необходимый вид. Потом отдает во **View** для отображения.
 **Presenter** контролирует, когда и какое состояние **View** нужно отобразить. Если у **View** два состояния, с данными и без, **Presenter** определит, когда и какое состояние отобразить.
 **Presenter** решает, как реагировать на пользовательские действия.
 
-##### ModuleInput 
+### ModuleInput
 
-– реализуется **Presenter**. Описывает методы, при помощи которых сконфигурировать начальный стейт модуля. Вызывается в **Configurator**. **ModuleInput** содержит набор методов, принимающих некоторые параметры. Они потом хранятся в **Presenter**.
+**ModuleInput** – реализует **Presenter**. Данный протокол должен содержать в себе методы, при помощи которых другой модуль, который держит ссылку на этот протокол, мог бы изменять состояния текущего модуля.
 
 Пример **ModuleInput** модуля профиля. С ним можно передать загруженный профиль пользователя во время открытия модуля.
 ```swift
@@ -251,10 +249,9 @@ protocol ProfileModuleInput: class {
 
 > Методы конфигурирования модуля с помощью какого-то параметра лучше называть, как в примере выше.  
 
-##### ModuleOutput 
+### ModuleOutput 
 
-– реализуется **Presenter** вызывающего модуля, ссылку держит **Presenter** вызываемого модуля. Если экран профиля можно отобразить с модуля новостей, то *NewsPresenter* должен реализовывать *ProfileModuleOutput*, а *ProfilePresenter* — содержать на него ссылку. **ModuleOutput** передается в **Configurator** вызываемого модуля и там устанавливается в **Presenter**. 
-Содержит в себе методы модуля, которые влияют на поведение вызывающего модуля.
+**ModuleOutput** – реализует **Presenter** вызывающего модуля, ссылку держит **Presenter** вызываемого модуля. Если экран профиля можно отобразить с модуля новостей, то NewsPresenter должен реализовывать ProfileModuleOutput, а ProfilePresenter содержать на него ссылку. **ModuleOutput** передается в Configurator вызываемого модуля и там устанавливается в **Presenter**. Содержит в себе методы модуля, которые влияют на поведение вызывающего модуля.
 
 Пример **ModuleOutput** модуля профиля, при помощи которого можно сообщать об изменении профиля вызывающему модулю.
 ```swift
@@ -264,14 +261,15 @@ protocol ProfileModuleOutput: class {
 }
 ```
 
-#### Router
+
+
+## Router
 
 **Router** отвечает за конфигурацию и отображение других модулей. Под другими модулями не обязательно подразумевается *ViewController*. Это может быть дочерняя *UIView*, какое-либо всплывающее сообщение об ошибке и т.п.
 
-##### RouterInput 
+### RouterInput 
 
-– реализуется **Router**, ссылку держит **Presenter**.
-Описывает набор методов. Они нужны, чтобы отобразить другой модуль.
+**RouterInput** – этот протокол реализует **Router,** а ссылку на него держит **Presenter,** так как он является единственным ответственным за то, чтобы инициировать дальнейшую навигацию в приложении.
 
 Пример **RouterInput** модуля профиля. С ним можно показать модуль редактирования профиля.
 
@@ -281,6 +279,10 @@ protocol ProfileRouterInput {
     func showEditProfileModule()
 }
 ```
+
+
+<details>
+<summary>Правила наименования методов в протоколе RouterInput</summary>
 
 **Замечание**
 В протоколе **RouterInput** часто возникают ошибки наименования методов. В имени раскрываются детали реализации модуля. Называть нужно, не привязываясь к деталям реализации.
@@ -301,19 +303,23 @@ func showEditProfileModule()
 
 **Ещё плохой пример:**
 
-```
+```swift
 func showConfirmationAlert()
 ```
 
 **Хороший пример:**
 
-```
+```swift
 func showConfirmationModule()
 ```
 
 > Мы стараемся не завязываться на детали реализации отображаемого модуля. Таким образом, мы в любой момент сможем поменять алерт на модальное окно, не трогая  протокол.  
 
-#### Configurator
+
+
+</details>
+
+## Configurator
 
 У **Configurator** нет протоколов. Он содержит только набор методов конфигурации модуля с разными входными данными.
 
@@ -326,7 +332,7 @@ final class ProfileModuleConfigurator {
 
     func configure(with profile: UserProfile) -> ProfileViewController {
         let view = ProfileViewController.controller()
-        let presenter = ProfilePresenter()
+        let presenter = ProfilePresenter(with: profile)
         let router = ProfileRouter()
 
         presenter.view = view
@@ -334,42 +340,32 @@ final class ProfileModuleConfigurator {
         router.view = view
         view.output = presenter
 
-	  presenter.configure(with: profile)
-
         return view
     }
 
 }
 ```
 
-## Лучшие практики
-### Работа с коллекциями
-#### Адаптеры
+
+
+# Лучшие практики
+
+## Работа с коллекциями
+### Адаптеры
 Во многих приложениях более половины экранов — коллекции *UITableView* или *UICollectionView*. Важно выбрать правильный подход разработки данных элементов, чтобы не проиграть в скорости и поддержке готовых решений.
 
-Реализация *UITableViewDelegate* и *UITableViewDataSource* (или *UICollectionViewDelegate* и *UICollectionViewDataSource*)  **ViewController** не соответствует [принципу единственной ответственности](https://ru.wikipedia.org/wiki/Принцип_единственной_ответственности). Мы выделили отдельный объект **Adapter**, который исполняет эти протоколы. 
+Из-за того, что *UITableViewDelegate* и *UITableViewDataSource* (или UICollectionViewDelegate и UICollectionViewDataSource) реализованные **ViewController-ом** не соответствует [принципу единственной ответственности](https://ru.wikipedia.org/wiki/Принцип_единственной_ответственности). Для того, чтобы решить эту проблему был выделен отдельный объект **Adapter**, который реализует эти протоколы.  
 
 **Adapter** избавляет **UIViewController** от знания о внутреннем устройстве коллекции.
-**Adapter** создается в **Configurator** и хранится во **View**. **View** получает необходимые данные. Далее она передает в **Adapter** ссылку на коллекцию для регистрации ячеек и информацию для запуска коллекции.
-Для передачи действий из ячеек и при нажатии на них создается специальный протокол **AdapterOutput**.
+**Adapter** создается и хранится во **View**. **View** получает необходимые данные. Далее она передает в **Adapter** ссылку на коллекцию для регистрации ячеек и информацию для запуска коллекции.
 
-Пример конфигурации хорошо знакомого нам модуля профиля, с созданием адаптера.
+Для передачи действий из ячеек и при нажатии на них есть два разных подхода: 
 
-```swift
-func configure() -> ProfileViewController {
-	let view = ProfileViewController.controller()
-	let presenter = ProfilePresenter()
-	let router = ProfileRouter()
-	let profileViewAdapter = ProfileViewAdapter(output: presenter)
-	presenter.view = view
-	presenter.router = router
-      router.view = view
-      view.output = presenter
-      view.adapter = profileViewAdapter
+* Создается отдельный протокол **AdapterOutput** 
+* Используются closure или [Events](https://github.com/surfstudio/CoreEvents)
 
-      return view
-}
-```
+> Используемый подход разнится в зависимости от проекта. Следует уточнять у лида проекта.
+
 
 Пример output-a для модуля профиля.
 
@@ -386,20 +382,26 @@ protocol ProfileViewAdapterOutput {
 Конфигурацию ячеек нужно производить внутри самих ячеек. Разберем на примере:
 
 ```swift
-let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCell.nameOfClass, for: indexPath) as! ProfileCell
+guard let cell = tableView.dequeueReusableCell(withIdentifier: ProfileCell.nameOfClass, for: indexPath) as? ProfileCell else {
+    return UITableViewCell()
+}
 cell.configure(with: subscription)
 return cell
 ```
 
 Мы не открываем **Adapter** внутреннее устройство ячейки. Только предоставляем набор методов для ее конфигурации.
 
-#### ReactiveDataDisplayManager
+> **Внимание!** данный метод постепенно заменяется на RDDM на всех проектах. Однако не исключается возможность комбинировать Adapter+RDDM.
 
-Другой способ реализации протоколов коллекций — использование библиотеки [ReactiveDataDisplayManger](https://github.com/LastSprint/ReactiveDataDisplayManager). Она предоставляет интерфейс **DDM** (Data Display Manager). С ним можно конфигурировать коллекции по элементам при помощи генераторов ячеек.
+### ReactiveDataDisplayManager
+
+В большом количестве проектов студии используется имеено этот подход с RDDM. 
+
+Библиотека [ReactiveDataDisplayManger](https://github.com/LastSprint/ReactiveDataDisplayManager) предоставляет интерфейс **DDM** (Data Display Manager). Используя данный подход можно конфигурировать коллекции по элементам при помощи генераторов ячеек.
 Это удобно для коллекций с разнородными ячейками. Можно последовательно передать блоки в **DDM** и не писать огромный switch-case.
 Более подробно о подходе в [репозитории проекта](https://github.com/LastSprint/ReactiveDataDisplayManager).
 
-### Взаимодействие с UIAlertController
+## Взаимодействие с UIAlertController
 
 Очень часто разработчики сталкиваются с вопросом отображения **UIAlertController**. Не понятно, какой компонент показывает алерт, кто его конфигурирует и т.п.
 
@@ -415,15 +417,15 @@ SomeModuleRouter.swift
 func showMessageModule(with message: String) {
     let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
     let cancelAction = UIAlertAction(title: nil, style: .cancel, handler: nil)
-    alertController(cancelAction)
-    self.present(alerController, animated: true, completion: nil)
+    alertController.addAction(cancelAction)
+    self.present(alertController, animated: true, completion: nil)
 }
 ```
 
 * **UIAlertController с логикой**
 Если алерт содержит какую-либо логику, реакцию на действия, его следует оборачивать в отдельный модуль и отображать через **Router**. Реакцию на действия нужно производить через *ModuleOutput* данного алерта.
 
-
+
 Пример отображения и конфигурирования алерта через **Router**
 ```swift
 SomeModuleRouter.swift
@@ -474,7 +476,9 @@ final class ActionsWithBankCardAlertViewController: UIAlertController {
 }
 ```
 
-### Кодогенерация
+
+
+# Кодогенерация
 
 Создание нового модуля достаточно трудоемкая задача. Для того, чтобы это сделать, нужно:
 * Четыре новых класса (*Configurator*, *Router*, *Presenter*, *ViewController*)
@@ -529,7 +533,6 @@ templates:
 - {name: surf_mvp_module}
 ```
 
-
 Теперь для генерации модуля достаточно перейти в Terminal
 в папку проекта и прописать` generamba gen YourModuleName surf_mvp_module.`
 
@@ -549,81 +552,4 @@ templates:
 
 #### Surf MVP в новом проекте
 
-Подход создания ничем не отличается от внедрения в уже существующий. В качестве структуры проекта используйте [Xcode-шаблон](https://github.com/surfstudio/Xcode-Project-Templates). Ниже структура проекта. 
-```
-Project
-  Project
-    Application
-      AppDelegate.swift
-      Info.plist
-    Library
-      Base Classes
-        BaseClass1.swift
-        BaseClass2.swift
-      Extensions
-        Extension1.swift
-        Extension2.swift
-      Protocols
-        Protocol1.swift
-        Protocol2.swift
-      Reusable Layer
-        ReuseView1.swift
-        ReuseView2.swift
-      Utils
-        UtilsClass1.swift
-        UtilsClass2.swift
-    Models
-      Entities
-        Model1.swift
-        Model2.swift
-      Entry
-        EntryModel1.swift
-        EntryModel2.swift
-    Resources
-      Constants
-        Closures.swift
-        Constants.swift
-        Colors.swift
-      Fonts
-        SF-UI-Text-Bold.otf
-        SF-UI-Text-Heavy.otf
-      Images
-        Assets.xcassets
-      Strings
-        Localizable.strings
-    User Stories
-      UserStory1
-        Module1
-          Configurator
-            Module1Configurtor.swift
-          Presenter
-            Module1Presenter.swift
-            Module1ModuleInput.swift
-            Module1ModuleOutput.swift
-          Router
-            Module1Router.swift
-            Module1RouterInput.swift
-          View
-            Module1ViewController.swift
-            Module1ViewInput.swift
-            Module1ViewOutput.swift
-            Module1ViewController.xib
-      UserStory2
-        ...
-    Services
-      Service1
-        Service1.swift
-    ThirdParty
-      SomeThirdPartyFramework
-        SomeDependency.swift
-  ProjectTests
-    Info.plist
-    Helpers.swift
-    Resources
-    Tests
-      Extensions
-      Models
-      UserStories
-      Services
-```
-
+Подход создания ничем не отличается от внедрения в уже существующий. В качестве структуры проекта используйте [Xcode-шаблон](https://github.com/surfstudio/Xcode-Project-Templates).
