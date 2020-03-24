@@ -31,7 +31,8 @@
 
 ## Архитектура
 
-- [Surf MVP](Surf_MVP.md) – наш стандарт разработки UI-слоя приложений
+- [Surf MVP](architecture/Surf_MVP.md) – наш стандарт разработки UI-слоя приложений
+- [Surf MVP+Coordinators](architecture/Surf_MVP_Coordinators.md) – надстройка над SurfMVP призванная упростить навигацию внутри приложения. 
 
 ## Кодогенерация
 
