@@ -30,4 +30,3 @@
 
 <p align="center">Схема приложения с Coordinated Surf MVP</p>
 
-
