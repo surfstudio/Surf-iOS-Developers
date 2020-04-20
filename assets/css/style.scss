@@ -48,30 +48,6 @@
 @media screen and (min-width: 42em) and (max-width: 64em) { .menu-header { padding: 0.5rem 4rem; } }
 @media screen and (max-width: 42em) { .menu-header { padding: 0.5rem 1rem; } }
 
-/*.menu-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #020016;
-}
-
-.menu-item {
-  float: right;
-}
-
-.menu-item > a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
-}
-
-.menu-item > a:hover {
-  color: #FF0C5A;
-}*/
-
 input[type=checkbox] {
   position: absolute;
   top: -9999px;
