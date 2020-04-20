@@ -34,7 +34,152 @@
 }
 
 .header-logo {
-	height: 80px;
+    padding-top: 7px;
+	height: 40px;
+	float: left;
+}
+
+.menu-header {
+	background-color: #020016;
+	padding: 10px 16px;
+}
+
+@media screen and (min-width: 64em) { .menu-header { padding: 0.5rem 6rem; } }
+@media screen and (min-width: 42em) and (max-width: 64em) { .menu-header { padding: 0.5rem 4rem; } }
+@media screen and (max-width: 42em) { .menu-header { padding: 0.5rem 1rem; } }
+
+/*.menu-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #020016;
+}
+
+.menu-item {
+  float: right;
+}
+
+.menu-item > a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.menu-item > a:hover {
+  color: #FF0C5A;
+}*/
+
+input[type=checkbox] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+label { 
+  display: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav[role="custom-dropdown"] {
+  /*position: relative;*/
+ 
+    
+  a,
+  label {
+    color: #fff;
+    text-decoration: none;
+    transition:color .3s ease-in-out;
+  }
+    
+  ul {
+  	float: right;
+    padding: 10px 0px;  
+    margin: 0 auto;  
+    list-style: none;
+    
+    > li {
+  		padding: 0 20px;
+      float: right;
+      text-align: right;
+      transition-duration: .3s;
+      transition-timing-function: ease-in-out;
+      transition-property: box-shadow, color;
+      cursor: pointer;
+    
+      &:hover {
+        > a {
+          color:#FF0C5A;
+        }
+      }
+    }
+  }
+}
+
+/* small screens */
+@media screen and (max-width: 44em) {
+  html,
+  body {
+    margin:0;      
+  }
+
+  nav[role="custom-dropdown"] {
+    ul {
+      display:none;
+      height:100%;
+    }
+
+    label {
+      position: relative;
+      display: block;
+      width: 100%;
+      min-height: 2.25em;
+      padding: .45em;
+      font-size: 1.1em;
+      margin: 0;
+    }
+    
+    label:after {
+      position: absolute;
+      right: .25em;  
+      top: 0; 
+      content: "\2261";
+      font-size: 1.8em;
+    }
+    
+    input[type=checkbox]:checked ~ label:after {
+      color:#fff;
+      background-color: #020016;
+    }
+        
+    input[type=checkbox]:checked ~ ul {
+      display: block;
+      background-color: #020016;
+      width: 100%;
+        
+      > li {
+        width:100%;
+        padding-top: 1em;
+        text-align:left;
+        top: .25em;
+    
+        &:after {
+          position: absolute;
+          right: .25em;
+          font: bold 1.4em sans-serif;
+        }
+      }        
+    }
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { 
