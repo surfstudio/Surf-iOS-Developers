@@ -3,15 +3,40 @@
 
 @import "{{ site.theme }}";
 
+/* Header */
+
 .page-header {
 	background-color: #000340;
-    background-image: linear-gradient(200deg, #ff1959, #000340);
+    background-image: url(../../img/ios-department-site-logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+@media screen and (min-width: 64em) { .page-header { padding: 0rem 0rem; } }
+@media screen and (min-width: 42em) and (max-width: 64em) { .page-header { padding: 0rem 0rem; } }
+@media screen and (max-width: 42em) { .page-header { padding: 0rem 0rem; } }
+
+.page-header-overlay {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (min-width: 64em) { .page-header-overlay { padding: 5rem 6rem; } }
+@media screen and (min-width: 42em) and (max-width: 64em) { .page-header-overlay { padding: 3rem 4rem; } }
+@media screen and (max-width: 42em) { .page-header-overlay { padding: 2rem 1rem; } }
+
+.site-logo {
+	display: none;
+}
+
+.header-logo-container {
+	display: flex;
+}
+
+.header-logo {
+	height: 80px;
 }
 
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { 
 	color: #000340;
-}
-
-.site-logo {
-	display: none;
 }
