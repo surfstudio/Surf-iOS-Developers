@@ -45,6 +45,7 @@
 # Полезные материалы
 
 * [Материалы для стажеров](usefulMaterials/traineeMaterials.md)
+* [Тестовый проект iOS стажера](usefulMaterials/testProject.md)
 
 # Open Source
 
