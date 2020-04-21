@@ -43,6 +43,10 @@
 
 - [TargetsCheck](https://github.com/chausovSurfStudio/TargetsCheck) - скрипт для проверки консистентности проекта, содержащего несколько Targets
 
+# Полезные материалы
+
+* [Материалы для стажеров](usefulMaterials/traineeMaterials.md)
+
 # Open Source
 
 Здесь находятся описание и ссылки на наши Pod-библиотеки с открытым исходным кодом. 
