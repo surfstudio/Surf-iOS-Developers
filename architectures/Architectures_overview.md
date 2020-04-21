@@ -118,6 +118,8 @@
 - [📜 Why I love Apple MVC](https://medium.com/@yesleon/why-i-love-apple-mvc-db97ebc44417)
 - [📼 Есть MVC: зачем же нужны другие архитектуры?](https://www.youtube.com/watch?v=z3u1qDao_d8)
 - [📜 Документация Apple про MVC](https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/Model-View-Controller/Model-View-Controller.html)
+- [📜 Model-View-Controller(MVC) iOS](https://medium.com/@yo.kononov/разбор-вопросов-на-собеседование-junior-ios-developer-dd969ecfbd41)
+- [📜 Козел отпущения или MVC в iOS](https://habr.com/ru/post/324414/)
 
 ## MVVM 🔃
 
@@ -259,6 +261,7 @@
 # Общие материалы
 
 - [📜 Основные архитектурные паттерны в iOS](https://stfalcon.com/ru/blog/post/clean-code)
+- [📜 iOS architecture patterns](https://thinkmobiles.com/blog/ios-architecture-patterns/)
 - [📜 Архитектурные паттерны в iOS от Badoo 2016 года](https://habr.com/ru/company/badoo/blog/281162/) - хорошая статься про основные архитектуры
 - [📜📼 про Coordinator в iOS приложениях](https://habr.com/ru/company/oleg-bunin/blog/423299/)
 
