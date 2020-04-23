@@ -1,0 +1,211 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Header */
+
+.page-header {
+	background-color: #000340;
+    background-image: url(../../img/ios-department-site-logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+@media screen and (min-width: 64em) { .page-header { padding: 0rem 0rem; } }
+@media screen and (min-width: 42em) and (max-width: 64em) { .page-header { padding: 0rem 0rem; } }
+@media screen and (max-width: 42em) { .page-header { padding: 0rem 0rem; } }
+
+.page-header-overlay {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (min-width: 64em) { .page-header-overlay { padding: 5rem 6rem; } }
+@media screen and (min-width: 42em) and (max-width: 64em) { .page-header-overlay { padding: 3rem 4rem; } }
+@media screen and (max-width: 42em) { .page-header-overlay { padding: 2rem 1rem; } }
+
+.site-logo {
+	display: none;
+}
+
+.header-logo-container {
+	display: flex;
+}
+
+.header-logo {
+    padding-top: 7px;
+	height: 40px;
+	float: left;
+}
+
+.menu-header {
+	background-color: #020016;
+	padding: 10px 16px;
+}
+
+@media screen and (min-width: 64em) { .menu-header { padding: 0.5rem 6rem; } }
+@media screen and (min-width: 42em) and (max-width: 64em) { .menu-header { padding: 0.5rem 4rem; } }
+@media screen and (max-width: 42em) { .menu-header { padding: 0.5rem 1rem; } }
+
+input[type=checkbox] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+label { 
+  display: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav[role="custom-dropdown"] {   
+  a,
+  label {
+    color: #fff;
+    text-decoration: none;
+    transition:color .3s ease-in-out;
+  }
+    
+  ul {
+  	float: right;
+    padding: 10px 0px;  
+    margin: 0 auto;  
+    list-style: none;
+    
+    > li {
+  		padding: 0 20px;
+      float: right;
+      text-align: right;
+      transition-duration: .3s;
+      transition-timing-function: ease-in-out;
+      transition-property: box-shadow, color;
+      cursor: pointer;
+    
+      &:hover {
+        > a {
+          color:#FF0C5A;
+        }
+      }
+    }
+  }
+}
+
+/* small screens */
+@media screen and (max-width: 44em) {
+  html,
+  body {
+    margin:0;      
+  }
+
+  nav[role="custom-dropdown"] {
+    ul {
+      display:none;
+      height:100%;
+    }
+
+    label {
+      position: relative;
+      display: block;
+      width: 100%;
+      min-height: 2.25em;
+      padding: .45em;
+      font-size: 1.1em;
+      margin: 0;
+    }
+    
+    label:after {
+      position: absolute;
+      right: .25em;  
+      top: 0; 
+      content: "\2261";
+      font-size: 1.8em;
+    }
+    
+    input[type=checkbox]:checked ~ label:after {
+      color:#fff;
+      background-color: #020016;
+    }
+        
+    input[type=checkbox]:checked ~ ul {
+      display: block;
+      background-color: #020016;
+      width: 100%;
+        
+      > li {
+        width:100%;
+        padding-top: 1em;
+        text-align:left;
+        top: .25em;
+    
+        &:after {
+          position: absolute;
+          right: .25em;
+          font: bold 1.4em sans-serif;
+        }
+      }        
+    }
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Main Content */
+
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { 
+	color: #000340;
+}
+
+a {
+	color: #00267A;
+	text-decoration: underline;
+  	transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+    transition-property: box-shadow, color;
+}
+
+a:hover {
+	color: #FF0C5A;
+	text-decoration: underline;
+}
+
+/* Footer */ 
+
+.site-footer {
+	background-color: #fff;
+}
+
+@media screen and (min-width: 64em) { .site-footer { padding: 2rem 6rem; } }
+@media screen and (min-width: 42em) and (max-width: 64em) { .site-footer { padding: 1rem 4rem; } }
+@media screen and (max-width: 42em) { .site-footer { padding: 1rem 1rem; } }
+
+.site-footer a {
+	color: #000340;
+	text-decoration: none;
+}
+
+.footer-logo {
+	height: 80px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+.site-footer a:hover {
+	color: #FF0C5A;
+}
+
+.site-footer-owner {
+	margin-top: 30px;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
