@@ -45,7 +45,8 @@
 # Полезные материалы
 
 * [Материалы для стажеров](usefulMaterials/traineeMaterials.md)
-* [Тестовый проект iOS стажера](usefulMaterials/testProject.md)
+* [Тестовый проект для iOS разработчика](usefulMaterials/testProject.md)
+* [Проекты для iOS стажеров](https://github.com/surfstudio/iOSSpringSchool2020/blob/master/practice.md)
 
 # Open Source
 
