@@ -2,31 +2,31 @@
 
 ## Содержание
 
-- [Предисловие](#Предисловие)
-- [Описание архитектуры](#Описание-архитектуры)
-  - [Взаимодействие между слоями](#Взаимодействие-между-слоями)
+- [Предисловие](#предисловие)
+- [Описание архитектуры](#описание-архитектуры)
+  - [Взаимодействие между слоями](#взаимодействие-между-слоями)
     - [View](#view)
-        - [ViewInput](#ViewInput)
-        - [ViewOutput](#ViewOutput)
+        - [ViewInput](#viewinput)
+        - [ViewOutput](#viewoutput)
 		- [Правила наименования методов ViewInput и ViewOutput](#правила-наименования-методов-viewinput-и-viewoutput)
-        - [ModuleTransitionable](#ModuleTransitionable)
-            - [Реализация кастомного перехода](#Реализация-кастомного-перехода)
-    - [Presenter](#Presenter)
-        - [ModuleInput](#ModuleInput)
-        - [ModuleOutput](#ModuleOutput)
-    - [Router](#Router)
-        - [RouterInput](#RouterInput)
+        - [ModuleTransitionable](#moduletransitionable)
+            - [Реализация кастомного перехода](#реализация-кастомного-перехода)
+    - [Presenter](#presenter)
+        - [ModuleInput](#moduleinput)
+        - [ModuleOutput](#moduleoutput)
+    - [Router](#router)
+        - [RouterInput](#routerinput)
 		- [Правила наименования методов в протоколе RouterInput](#правила-наименования-методов-в-протоколе-routerinput)
-    - [Configurator](#Configurator)
-- [Лучшие практики](#Лучшие-практики)
-  - [Работа с коллекциями](#Работа-с-коллекциями)
-    - [Адаптеры](#Адаптеры)
-    - [ReactiveDataDisplayManger](#ReactiveDataDisplayManager)
-  - [Взаимодействие с UIAlertController](#Взаимодействие-с-UIAlertController)
-- [Кодогенерация](#Кодогенерация)
-- [Внедрение Surf MVP](#Внедрение-Surf-MVP)
-  - [Surf MVP в существующем проекте](#Surf-MVP-в-существующем-проекте)
-  - [Surf MVP в новом проекте](#Surf-MVP-в-новом-проекте)
+    - [Configurator](#configurator)
+- [Лучшие практики](#лучшие-практики)
+  - [Работа с коллекциями](#работа-с-коллекциями)
+    - [Адаптеры](#адаптеры)
+    - [ReactiveDataDisplayManger](#reactivedatadisplaymanager)
+  - [Взаимодействие с UIAlertController](#взаимодействие-с-uialertcontroller)
+- [Кодогенерация](#кодогенерация)
+- [Внедрение Surf MVP](#внедрение-surf-mvp)
+  - [Surf MVP в существующем проекте](#surf-mvp-в-существующем-проекте)
+  - [Surf MVP в новом проекте](#surf-mvp-в-новом-проекте)
 
 # Предисловие
 
@@ -186,10 +186,8 @@ func configureTableViewAdapter(with: SomeParameter)
 func configure(with: SomeParameter)
 ```
 
-> Мы не раскрываем реализацию view **Presenter**-у. Он не знает, как устроена **View**. Он видит набор методов взаимодействия. Вводя метод *configureTableViewAdapter*, мы говорили ему, что View содержит таблицу.  
+> Мы не раскрываем реализацию view **Presenter**-у. Он не знает, как устроена **View**. Он видит набор методов взаимодействия. Вводя метод *configureTableViewAdapter*, мы говорили ему, что View содержит таблицу.
 
-
-​	
 </details>
 
 
