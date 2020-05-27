@@ -75,7 +75,8 @@
 | [RDDM](https://github.com/surfstudio/ReactiveDataDisplayManager) | Для удобной работы с UI коллекциями | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager.svg?branch=master&style=flat)](https://travis-ci.org/surfstudio/ReactiveDataDisplayManager)
 | [TextFieldsCatalog](https://github.com/chausovSurfStudio/TextFieldsCatalog) | Коллекция богатых и хорошо кастомизируемых текстовых полей | [chausovSurfStudio](https://github.com/chausovSurfStudio) | [![Build Status](https://travis-ci.org/chausovSurfStudio/TextFieldsCatalog.svg?branch=master&style=flat)](https://travis-ci.org/chausovSurfStudio/TextFieldsCatalog)
 | [MaskInterpreter](https://github.com/surfstudio/MaskInterpreter) | Интерпритатор масок для пользовательского ввода | [LastSprint](https://github.com/LastSprint) | [![Actions Status](https://github.com/LastSprint/MaskInterpreter/workflows/CI/badge.svg)](https://github.com/LastSprint/MaskInterpreter/actions)
-| [OTPTextField](https://github.com/fixique/OTPTextField) | Библиотека для реализации OTP поля ввода | [Fixique](https://github.com/fixique) | [![Build Status](https://travis-ci.com/fixique/OTPTextField.svg?branch=master)](https://travis-ci.com/fixique/OTPTextField) 
+| [OTPTextField](https://github.com/fixique/OTPTextField) | Библиотека для реализации OTP поля ввода | [Fixique](https://github.com/fixique) | [![Build Status](https://travis-ci.com/fixique/OTPTextField.svg?branch=master)](https://travis-ci.com/fixique/OTPTextField)
+| [SurfGen](https://github.com/JohnReeze/SurfGen) | Утилита для генерации моделей для [NodeKit](https://github.com/surfstudio/NodeKit) | [JohnReeze](https://github.com/JohnReeze) | [![Build Status](https://travis-ci.com/JohnReeze/SurfGen.svg?token=ZXokqeDnBGm8WAqyowYA&branch=master)](https://travis-ci.com/JohnReeze/SurfGen)
 
 # Forks
 
