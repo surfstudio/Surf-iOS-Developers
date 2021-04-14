@@ -22,12 +22,13 @@
 
 ## Инициализация проектов
 
-- [Xcode-Project-Templates](https://github.com/surfstudio/Xcode-Project-Templates) – набор шаблонов для упрощения процесса создания проекта. Позволяет генерировать необходимые папки, файлы и так далее.
+- [iOS Project Starter](https://github.com/surfstudio/iOS-project-starter) – набор скриптов, который используем для инициализации проектов.
+- [Xcode-Project-Templates](https://github.com/surfstudio/Xcode-Project-Templates) [deprecated] – набор шаблонов для упрощения процесса создания проекта. Позволяет генерировать необходимые папки, файлы и так далее. Сейчас используем в основном Project starter (см. пункт выше).
 
 ## Кодстайл
 
 - [Swift Code Style](https://github.com/surfstudio/SwiftCodestyle) - указания по оформлению кода на Swift.
-- [Obj-C Code Style](https://github.com/surfstudio/objective-c-style-guide) - указания по оформлению кода на Obj-C
+- [Obj-C Code Style](https://github.com/surfstudio/objective-c-style-guide) - указания по оформлению кода на Obj-C.
 
 ## Архитектура
 
