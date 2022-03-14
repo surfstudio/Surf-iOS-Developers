@@ -27,6 +27,8 @@
 - [Внедрение Surf MVP](#внедрение-surf-mvp)
   - [Surf MVP в существующем проекте](#surf-mvp-в-существующем-проекте)
   - [Surf MVP в новом проекте](#surf-mvp-в-новом-проекте)
+  - [Если в проекте нет Unit Tests](#если-в-проекте-нет-unit-tests)
+- [Тестовый проект](#тестовый-проект)
 
 # Предисловие
 
@@ -563,3 +565,6 @@ test_file_path: YourProjectNameTests/Tests/Screens
 # The Xcode group path to new tests
 test_group_path: YourProjectNameTests/Tests/Screens
 ```
+# Тестовый проект
+
+Наглядно ознакомиться с внедрением Surf MVP вы можете в [тестовом проекте](https://github.com/surfstudio/surf-mvp-example)
