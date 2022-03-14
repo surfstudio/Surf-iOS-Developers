@@ -548,3 +548,18 @@ templates:
 #### Surf MVP в новом проекте
 
 Подход создания ничем не отличается от внедрения в уже существующий. В качестве структуры проекта используйте [Xcode-шаблон](https://github.com/surfstudio/Xcode-Project-Templates).
+
+#### Если в проекте нет Unit Tests
+
+В Rambafile убрать: 
+
+``` ### Tests generation settings section
+# The tests target name
+test_target: YourProjectNameTests
+
+# The file path for new tests
+test_file_path: YourProjectNameTests/Tests/Screens
+
+# The Xcode group path to new tests
+test_group_path: YourProjectNameTests/Tests/Screens
+```
