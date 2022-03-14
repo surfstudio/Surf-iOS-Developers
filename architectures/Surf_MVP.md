@@ -563,23 +563,3 @@ test_file_path: YourProjectNameTests/Tests/Screens
 # The Xcode group path to new tests
 test_group_path: YourProjectNameTests/Tests/Screens
 ```
-
-В surf_mvp_module.rambaspec необходимо убрать: 
-
-```# The declarations for test files
-
-test_files:
-
-# Configurators tests
-- {name: Configurator/ModuleConfiguratorTests.swift, path: Tests/Configurator/module_configurator_tests.swift.liquid}
-
-# Router tests
-- {name: Router/RouterTests.swift, path: Tests/Router/router_tests.swift.liquid}
-
-# Presenter tests
-- {name: Presenter/PresenterTests.swift, path: Tests/Presenter/presenter_tests.swift.liquid}
-
-# View tests
-- {name: View/ViewTests.swift, path: Tests/View/view_tests.swift.liquid}
-```
-
