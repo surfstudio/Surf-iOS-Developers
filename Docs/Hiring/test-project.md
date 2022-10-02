@@ -8,9 +8,9 @@
 
 ### к технологиям 
 
-* язык программирования Swift или Objective-C 
+* язык программирования Swift
 * проект опубликован на GitHub
-* в качестве источника данных использовать любое открытое API (можно выбрать [здесь](https://github.com/toddmotto/public-apis) и [здесь](https://github.com/surfstudio/iOSSpringSchool2020/blob/master/practice.md))
+* в качестве источника данных использовать любое открытое API (можно выбрать [здесь](https://github.com/toddmotto/public-apis) или [здесь](https://github.com/surfstudio/iOSSpringSchool2020/blob/master/practice.md))
 
 ### к реализации 
 
@@ -21,7 +21,7 @@
 
 ### рекомендуется 
 
-* ознакомится с материалами из нашего [репозитория](https://github.com/surfstudio/Surf-iOS-Developers)  
+* ознакомится с материалами из нашего [репозитория](https://github.com/surfstudio/Surf-iOS-Developers)
 * по максимуму использовать системные компоненты и библиотеки (использование сторонних компонентов, библиотек и фреймворком должно быть обосновано в Readme проекта)
 * уделить внимание организации кода и структуре проекта (можно использовать [наш code-style](https://github.com/surfstudio/SwiftCodestyle))
 * отнестись к коду проекта так, как будто он является частью большого проекта, а не маленьким локальным приложением

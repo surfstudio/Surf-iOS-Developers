@@ -18,7 +18,7 @@
 
 Из-за того, что навигация в приложение написанном на **SurfMVP** строится посредством обращение одного модуля через router к другому модулю. Схематично это выглядит следующим образом: 
 
-![SurfMVPNavigation](../img/CoordinatedSurfMVP/surf_mvp_navigation.jpeg)
+![SurfMVPNavigation](sources/surf_mvp_navigation.jpeg)
 
 <p align="center">Схема навигации в Surf MVP</p>
 
@@ -28,7 +28,7 @@
 
 В основе архитектуры **Coordinated Surf MVP** лежит привычный для нас **Surf MVP**. Подробней можно прочитать [тут](Surf_MVP.md). 
 
-![SurfMVPNavigation](../img/CoordinatedSurfMVP/coordinated_surf_mvp.jpeg)
+![SurfMVPNavigation](sources/coordinated_surf_mvp.jpeg)
 
 <p align="center">Схема Coordinated Surf MVP – модуль</p>
 
@@ -38,7 +38,7 @@
 
 В Coordinated SurfMVP сущность Router заменила сущность [Coordinator](http://khanlou.com/2015/01/the-coordinator/), которая теперь отвечает за работу навигации не одного отдельного модуля, а набора модулей, которые связаны друг с другом логически. Это упрощает навигацию и работу с приложением. Схематично приложение будет выглядить так: 
 
-![SurfMVPNavigation](../img/CoordinatedSurfMVP/сoordinated_surf_mvp_scheme.jpeg)
+![SurfMVPNavigation](sources/сoordinated_surf_mvp_scheme.jpeg)
 
 <p align="center">Схема приложения с Coordinated Surf MVP</p>
 
@@ -46,7 +46,7 @@
 
 Схематично навигация в приложение выглядит теперь таким образом. Каждый отдельный UserFlow обращается к собственному координатору, который уже в свою очередь решает, что будет происходить в дальнейшем. Ответственность по передачи данных и инициации дальнейшей навигации теперь лежит на координаторе, он уже связывается с другими модулями или другими координаторами, чтобы продолжить построение стека навигации.
 
-![SurfMVPNavigation](../img/CoordinatedSurfMVP/coordniated_surf_mvp_navigation.jpeg)
+![SurfMVPNavigation](sources/coordniated_surf_mvp_navigation.jpeg)
 
 <p align="center">Схема навигации в Coordinated Surf MVP</p>
 
