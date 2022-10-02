@@ -6,7 +6,7 @@ Surf c 2011 года специализируется на разработке 
 
 Более 10 лет на рынке, 30+ разработчиков в отделе, несколько десятков успешных продуктов - всё это дало возможность накопить большую экспертизу в области разработки мобильных приложений, и помогает нам ежедневно развивать флагманские продукты наших клиентов.
 
-<img src="img/github-icon.png" width="20" height="20"> [GitHub Pages](https://surfstudio.github.io/Surf-iOS-Developers/)
+<img src="img/github-icon.svg" width="18" height="18"> [GitHub Pages](https://surfstudio.github.io/Surf-iOS-Developers/)
 
 ## Немного о нас
 
