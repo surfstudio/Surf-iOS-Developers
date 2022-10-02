@@ -32,4 +32,4 @@ Surf c 2011 года специализируется на разработке 
 
 -------
 
-<img src="img/github-icon.png"> [GitHub Pages](https://surfstudio.github.io/Surf-iOS-Developers/)
+<img src="img/github-icon.png" width="15" height="15">    [GitHub Pages](https://surfstudio.github.io/Surf-iOS-Developers/)
