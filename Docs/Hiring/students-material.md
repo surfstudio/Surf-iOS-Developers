@@ -32,9 +32,7 @@
 ### Что посмотреть
 
 * [YouTube канал Rambler&Co](https://www.youtube.com/channel/UCbSp3qd2_KqahfeOKN3WOrQ) с видеозаписями докладов и их встреч (RU)
-
 * [YouTube канал сообщества CocoaHeads](https://www.youtube.com/channel/UCPZtkJkHv_3pPC0veurLQ6Q) с видеозаписями докладов с их встреч (RU)
-
 * [Новости от Apple команды Realm](https://academy.realm.io/section/apple/), в основном ссылки на доклады на конференциях (EN)
 * [YouTube канал конференции UIKonf](https://www.youtube.com/user/UIKonf/feed), который включает в себя записи всех докладов там проходивших (EN)
 * [YouTube канал Avito Tech](https://www.youtube.com/channel/UCO2w0cpl1wxygHjQH6eEfEg) полон докладами на разные темы
@@ -90,7 +88,6 @@
 ### Сайты, полезные рассылки и блоги
 
 * [AppCoda](http://www.appcoda.com/)
-
 * [RayWenderlich.com](https://www.raywenderlich.com/)
 * [NSHipster](http://nshipster.com/)
 * [CIMGF](http://www.cimgf.com/)

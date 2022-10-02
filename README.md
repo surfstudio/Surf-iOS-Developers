@@ -1,106 +1,31 @@
+# Surf iOS Department
 
 <img src="img/ios-department-logo.svg" class="site-logo">
 
-# Surf iOS
+Surf c 2011 года специализируется на разработке мобильных приложений.
 
-[Github pages](https://surfstudio.github.io/Surf-iOS-Developers/)
+Более 10 лет на рынке, 30+ разработчиков в отделе, несколько десятков успешных продуктов - всё это дало возможность накопить большую экспертизу в области разработки мобильных приложений, и помогает нам ежедневно развивать флагманские продукты наших клиентов.
 
-В этом репозитории собраны все наши библиотеки, утилиты, инструменты, лучшие практики и форки сторонних библиотек которые мы используем в своей повседневной работе.
+## Немного о нас
 
-**Содержание**
-- [Лучшие практики](#лучшие-практики)
-  - [Инициализация проектов](#инициализация-проектов)
-  - [Кодстайл](#кодстайл)
-  - [Архитектура](#архитектура)
-  - [Кодогенерация](#кодогенерация)
-  - [Инструменты](#инструменты)
-- [Open Source](#open-source)
-  - [Утилиты](#утилиты)
-  - [Библиотеки](#библиотеки)
-- [Forks](#forks)
-- [Правила работы с репозиторием](#правила-работы-с-репозиторием)
+1. [Команда](Docs/team.md)
+2. [Инструменты и подходы](Docs/tech-stack/techStack.md)
+3. [Процессы](Docs/processes.md)
 
-# Лучшие практики
+Список актуальных библиотек с открытым исходным кодом в фазе активного развития:
 
-## Инициализация проектов
+| Название | Описание | Статус |
+| :--- | :--- | :--- |
+| [RDDM](https://github.com/surfstudio/ReactiveDataDisplayManager) | Библиотека для ускорения разработки при работе с коллекциями, такими как UITableView/UICollectionView | [![Build](https://github.com/surfstudio/ReactiveDataDisplayManager/actions/workflows/Build.yml/badge.svg)](https://github.com/surfstudio/ReactiveDataDisplayManager/actions/workflows/Build.yml) |
+| [NodeKit](https://github.com/surfstudio/NodeKit) | Быстрое и удобное построение комплексного сетевого слоя | [![GitHubActions Build Status](https://github.com/surfstudio/NodeKit/workflows/CI/badge.svg)](https://github.com/surfstudio/NodeKit/actions) |
+| [SurfUtils](https://github.com/surfstudio/iOS-Utils) | Набор небольших утилит, позволяющих сократить траты времени на рутинные действия | [![GitHubActions Build Status](https://github.com/surfstudio/iOS-Utils/workflows/CI/badge.svg)](https://github.com/surfstudio/iOS-Utils/actions) |
+| [DebugScreen](https://github.com/surfstudio/debug-screen-ios) | Библиотека для быстрого создания и кастомизации экрана отладки приложения | [![GitHubActions Build Status](https://github.com/surfstudio/debug-screen-ios/workflows/CI/badge.svg)](https://github.com/surfstudio/debug-screen-ios/actions) |
+| [SurfGen](https://github.com/surfstudio/SurfGen) | Генератор сервисного слоя и слоя моделей по спецификации в формате openAPI 3.x | [![Build Status](https://github.com/surfstudio/SurfGen/workflows/release/badge.svg)](https://github.com/surfstudio/SurfGen/actions) |
 
-- [iOS Project Starter](https://github.com/surfstudio/iOS-project-starter) – набор скриптов, который используем для инициализации проектов.
-- [Xcode-Project-Templates](https://github.com/surfstudio/Xcode-Project-Templates) [deprecated] – набор шаблонов для упрощения процесса создания проекта. Позволяет генерировать необходимые папки, файлы и так далее. Сейчас используем в основном Project starter (см. пункт выше).
+На [этой странице](Docs/tech-stack/open-source.md) вы сможете увидеть другие наши open-source решения.
 
-## Кодстайл
+## Как к нам попасть?
 
-- [Swift Code Style](https://github.com/surfstudio/SwiftCodestyle) - указания по оформлению кода на Swift.
-- [Obj-C Code Style](https://github.com/surfstudio/objective-c-style-guide) - указания по оформлению кода на Obj-C.
+Мы постоянно в поиске талантливых коллег. На что мы обращаем внимание на собеседовании, как происходит процесс найма и как происходит онбординг сотрудника в команду - [в этом разделе](Docs/Hiring/hiring.md).
 
-## Архитектура
-
-- [Surf MVP](architectures/Surf_MVP.md) – наш стандарт разработки UI-слоя приложений
-- [Surf MVP+Coordinators](architectures/Surf_MVP_Coordinators.md) – надстройка над SurfMVP призванная упростить навигацию внутри приложения. 
-
-## Кодогенерация
-
-- [Generamba templates](https://github.com/surfstudio/generamba-templates) – содержит набор шаблонов для генерации кода _(шаблон ViewController, шаблон Presenter и т.д.)_ для Generamba
-
-## Инструменты
-
-- [TargetsCheck](https://github.com/chausovSurfStudio/TargetsCheck) - скрипт для проверки консистентности проекта, содержащего несколько Targets
-
-# Полезные материалы
-
-* [Материалы для стажеров](usefulMaterials/traineeMaterials.md)
-* [Тестовый проект для iOS разработчика](usefulMaterials/testProject.md)
-* [Проекты для iOS стажеров](https://github.com/surfstudio/iOSSpringSchool2020/blob/master/practice.md#%D1%82%D0%B5%D0%BC%D1%8B)
-
-# Open Source
-
-Здесь находятся описание и ссылки на наши Pod-библиотеки с открытым исходным кодом. 
-Любую из этих библиотек можно установить к себе в проект с помощью `CocoaPods`
-
-## Утилиты
-
-Содержит набор небольших утилит. 
-Все утилиты находятся в одном репозитории, но разбиты по разным `subspecs`
-
-Утилитой может быть форматер телефонных номеров или обертка над `NSAttributedString`
-
-Для получения более подробной информации [iOS Utils](https://github.com/surfstudio/iOS-Utils)
-
-## Библиотеки
-
-Эта секция содержит короткое описание и ссылки на репозитории библиотек которые мы активно разрабатываем, поддерживаем и используем в своих проектах. 
-
-[Как добавить свою библиотеку](/ADD_NEW_LIB_TUTORIAL.md)
-
-| Название | Описание | Автор | Статус |
-| :--- | :--- | :--- | :---: |
-| [CoreEvents](https://github.com/surfstudio/CoreEvents) | C#-подобные события | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/CoreNetKit.svg?branch=master)](https://travis-ci.org/surfstudio/CoreEvents)
-| [NodeKit](https://github.com/surfstudio/NodeKit) | Позволяет быстро и удобно работать с сетевыми запросами | [LastSprint](https://github.com/LastSprint) | [![Build Status](https://travis-ci.org/surfstudio/NodeKit.svg?branch=master)](https://travis-ci.org/surfstudio/NodeKit)
-| [RDDM](https://github.com/surfstudio/ReactiveDataDisplayManager) | Для удобной работы с UI коллекциями | [NullIsOne](https://github.com/NullIsOne), [LastSprint](https://github.com/LastSprint) | [![Build Status](https://github.com/surfstudio/ReactiveDataDisplayManager/actions/workflows/Build.yml/badge.svg)](https://github.com/surfstudio/ReactiveDataDisplayManager/actions/workflows/Build.yml)
-| [TextFieldsCatalog](https://github.com/chausovSurfStudio/TextFieldsCatalog) | Коллекция богатых и хорошо кастомизируемых текстовых полей | [chausovSurfStudio](https://github.com/chausovSurfStudio) | [![Build Status](https://travis-ci.org/chausovSurfStudio/TextFieldsCatalog.svg?branch=master&style=flat)](https://travis-ci.org/chausovSurfStudio/TextFieldsCatalog)
-| [MaskInterpreter](https://github.com/surfstudio/MaskInterpreter) | Интерпритатор масок для пользовательского ввода | [LastSprint](https://github.com/LastSprint) | [![Actions Status](https://github.com/LastSprint/MaskInterpreter/workflows/CI/badge.svg)](https://github.com/LastSprint/MaskInterpreter/actions)
-| [OTPTextField](https://github.com/fixique/OTPTextField) | Библиотека для реализации OTP поля ввода | [Fixique](https://github.com/fixique) | [![Build Status](https://travis-ci.com/fixique/OTPTextField.svg?branch=master)](https://travis-ci.com/fixique/OTPTextField)
-| [SurfGen](https://github.com/JohnReeze/SurfGen) | Утилита для генерации моделей для [NodeKit](https://github.com/surfstudio/NodeKit) | [JohnReeze](https://github.com/JohnReeze) | [![Build Status](https://travis-ci.com/JohnReeze/SurfGen.svg?token=ZXokqeDnBGm8WAqyowYA&branch=master)](https://travis-ci.com/JohnReeze/SurfGen)
-
-# Forks
-
-| Название | Почему ответвились |
-| :--- | :---- |
-| [Generamba](github.com/surfstudio/Generamba) | Для работы с Bundler
-| [WSTagsField](https://github.com/surfstudio/WSTagsField) | Исправили краш и поддержка
-| [Popover](https://github.com/surfstudio/Popover) | Исправили баг с расчетом размеров Popover'а
-| [PluggableApplicationDelegate](https://github.com/surfstudio/PluggableApplicationDelegate)| Поддерживаем |
-| [SwiftTheme](https://github.com/surfstudio/SwiftTheme)| Добавили alpha-канал к представлению цвета в hex |
-| [MWPhotoBrowser](https://github.com/surfstudio/MWPhotoBrowser)| Багфиксинг и поддержка
-| [TLYShyNavBar](https://github.com/surfstudio/TLYShyNavBar) | Поддержка
-| [ICViewPager](https://github.com/surfstudio/ICViewPager) | Доработка и поддержка
-| [NSObject+Rx](https://github.com/surfstudio/NSObject-Rx) | Добавили совместимость с RxSwift ~> 3.1.0
-| [RxGesture](https://github.com/surfstudio/RxGesture) | Понизили deployment target до iOS 8.0
-| [OpalImagePicker](https://github.com/surfstudio/OpalImagePicker) | Доработка и поддержка
-
-# Правила работы с репозиторием
-
-Репозиторий создан с целью агрегирования всех собственных библиотек, утилит, инструментов, форков сторонних библиотек и различных практик которые мы используем в своей работе. 
-
-**Для внесения изменений необходимо быть членом iOS команды Surf**
-
-Более детально правила описаны [**здесь**](https://github.com/surfstudio/iOS_Devs/blob/master/CONTRIBUTING.md)
+Для разработчиков, только начинающих свой путь, мы расскажем, какие есть возможности стажировки внутри компании, а также дадим советы с чего начать - [в этом разделе](Docs/Hiring/students.md).

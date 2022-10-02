@@ -61,7 +61,7 @@
 
 В основе архитектуры SurfMVP лежит классический MVP (Model View Presenter) — шаблон проектирования, который используется для построения пользовательского интерфейса.
 
-![surf_mvp_old](../img/SurfMVP/surf_mvp_old.jpeg)
+![surf_mvp_old](sources/surf_mvp_old.jpeg)
 
 <p align="center">Схема классического MVP - модуля</p>
 
@@ -79,7 +79,7 @@
 
 * **Model** в SurfMVP – это сервисы, которые вызывает Presenter для получения данных. Зачастую, один сервис решает задачи для работы целого модуля, однако в сложных ситуациях приходится взаимодействовать с несколькими. 
 
-![surf_mvp_new](../img/SurfMVP/surf_mvp_new.jpeg)
+![surf_mvp_new](sources/surf_mvp_new.jpeg)
 
 <p align="center">Схема Surf MVP - модуля</p>
 
@@ -87,7 +87,7 @@
 
 Основная особенность **SurfMVP**  —  каждый слой в MVP отделен от другого протоколом. На изображении видно схему слоев и связь протоколов между ними. Протоколы нужны, чтобы каждый слой был обособлен от другого и в теории легко заменялся. Каждый из слоев не должен раскрывать детали реализации. 
 
-![surf_mvp_layers](../img/SurfMVP/surf_mvp_layers.jpeg)
+![surf_mvp_layers](sources/surf_mvp_layers.jpeg)
 <p align="center">Схема слоев SurfMVP</p>
 
 **Рассмотрим их отдельно:** 
@@ -565,6 +565,7 @@ test_file_path: YourProjectNameTests/Tests/Screens
 # The Xcode group path to new tests
 test_group_path: YourProjectNameTests/Tests/Screens
 ```
+
 # Тестовый проект
 
 Наглядно ознакомиться с внедрением Surf MVP вы можете в [тестовом проекте](https://github.com/surfstudio/surf-mvp-example)
