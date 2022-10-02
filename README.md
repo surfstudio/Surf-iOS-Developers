@@ -1,6 +1,6 @@
 # Surf iOS Department
 
-[![Surf-iOS](https://i.ibb.co/VYcdj6S/Group-48095988.png)](https://github.com/surfstudio/Surf-iOS-Developers)
+<img src="img/ios-department-logo.svg" class="site-logo">
 
 Surf c 2011 года специализируется на разработке мобильных приложений.
 
@@ -22,7 +22,7 @@ Surf c 2011 года специализируется на разработке 
 | [DebugScreen](https://github.com/surfstudio/debug-screen-ios) | Библиотека для быстрого создания и кастомизации экрана отладки приложения | [![GitHubActions Build Status](https://github.com/surfstudio/debug-screen-ios/workflows/CI/badge.svg)](https://github.com/surfstudio/debug-screen-ios/actions) |
 | [SurfGen](https://github.com/surfstudio/SurfGen) | Генератор сервисного слоя и слоя моделей по спецификации в формате openAPI 3.x | [![Build Status](https://github.com/surfstudio/SurfGen/workflows/release/badge.svg)](https://github.com/surfstudio/SurfGen/actions) |
 
-На [этой странице](Docs/tech-stack/open-source.md) вы сможете увидеть другие наши open-source решения, помогающие нам в ежедневной работе.
+На [этой странице](Docs/tech-stack/open-source.md) вы сможете увидеть другие наши open-source решения.
 
 ## Как к нам попасть?
 
