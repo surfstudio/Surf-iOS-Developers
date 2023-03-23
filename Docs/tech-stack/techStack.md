@@ -29,7 +29,7 @@ There’s a set code style we follow at the studio; you can check it out [here](
 
 Any projects that differ or deviate from that, or have anything added to them, have that written down in the project documentation.
 
-## Архитектура
+## Architecture
 
 - We split large monolith apps into modules:
     - new apps are initially designed in a way that would split all the code into distinct modules;

@@ -1,32 +1,32 @@
-# Начинающему разработчку
+# To aspiring developers
 
-## Возможность стажировки в Surf
+## Trainee program at Surf
 
-Начни карьеру в IT с Surf. Если у тебя уже есть некоторый опыт работы и желание развиваться в выбранном направлении — присоединяйся к нашей команде!
+Start your career in IT at Surf. If you already have some work experience and you’re willing to grow in the field you’ve chosen — join our team!
 
-Стажировка проходит под управлением опытного наставника и длится 2-3 месяца. По итогам ты получишь опыт работы в реальном проекте и шанс перейти на постоянную работу.
+During the 2-3 months trainee period, you will be supervised by an experienced mentor. By the end of it, you will have gained experience working on a real-life project and a chance to get a full-time offer.
 
-### Что необходимо сделать?
+### What do you need to do?
 
-Чтобы попасть на стажировку, необходимо:
-1. Отправить письмо с небольшим рассказом о своем опыте и желании стажироваться на job@surfstudio.ru
-2. Хорошо выполнить тестовое задание
-3. Успешно пройти собеседование с HR и руководителем отдела
+To become a trainee, you need to:
+1. Send a letter to job@surfstudio.ru giving a brief description of your experience and saying you’d like to become a trainee
+2. Do a decent job of writing your test project
+3. Successfully pass the interview with our HR and head of department
 
-А на [этой странице](students-test-project.md) ты можешь найти ТЗ для тестового задания.
+[Here](students-test-project.md) you’ll find the technical specifications for the test project.
 
-## Как проходит стажировка
+## What is the program like?
 
-- Онбординг в компанию. Познакомим с основными процессами: куда писать с проблемами, как трекать рабочее время, какие есть внутренние регламенты. Выдадим права для основных сервисов, которыми пользуемся в работе.
-- Тестовый проект. Поможем сделать свой iOS-проект, следуя лучшим практикам под руководством наших менторов
-- Боевой проект. Поможем влиться в команду и начать выполнять полноценные задачи на боевом проекте
+- Onboarding into the company. We’ll get you familiar with the basic procedures: where to refer to when having problems, how to track your working hours, and what in-house regulations we have. We’ll also grant you permission to access the main services we use at work.
+- Test project. We’ll help you do your iOS project in accordance with the best practices and under the supervision of our mentors.
+- Real-life project. We’ll help you blend into your team and start doing real-life tasks on a fully functional project.
 
-## Материалы
+## Materials
 
-Если вы только начали свой путь в iOS-разработке, то можете ознакомиться с нашей подборкой [обучающих материалов для стажеров](students-material.md) (и не только).
+If you’ve only just started your way in iOS development, feel free to check out our selection of [learning resources for trainees](students-material.md) (and more).
 
-Если вы хотите построить путь развития на несколько шагов вперед, то попробуйте найти на просторах интернета roadmap-ios разработчика. Самые интересные, на наш взгляд, вы сможете найти
-- на одном из репозиториев github под названием [iOS-Developer-Roadmap](https://github.com/BohdanOrlov/iOS-Developer-Roadmap);
-- и в [одном из блогов](https://artyom.space/swift-roadmap/#swift) на просторах сети интернет.
+If you want to map out your education several steps ahead, try looking for a “roadmap of an ios developer” on the internet. In our opinion, you’ll find the most interesting ones:
+- in one of the GitHub repositories named [iOS-Developer-Roadmap](https://github.com/BohdanOrlov/iOS-Developer-Roadmap);
+- and in [one of the blogs](https://artyom.space/swift-roadmap/#swift) on the internet.
 
-[Проекты для вдохновения](https://github.com/surfstudio/iOSSpringSchool2020/blob/master/practice.md#%D1%82%D0%B5%D0%BC%D1%8B) и развития скиллов можете найти на страничке с одной из наших летних школ.
+You can also find some [projects to get your creative juices flowing](https://github.com/surfstudio/iOSSpringSchool2020/blob/master/practice.md#%D1%82%D0%B5%D0%BC%D1%8B) and boost your skills on the page of one of our summer schools.

@@ -1,40 +1,40 @@
 # Open-Source
 
-### Список актуальных библиотек с открытым исходным кодом в фазе активного развития
+### A list of actionable open-source libraries undergoing development
 
-| Название | Описание | Статус |
+| Name | Description | Status |
 | :--- | :--- | :--- |
-| [RDDM](https://github.com/surfstudio/ReactiveDataDisplayManager) | Библиотека для ускорения разработки при работе с коллекциями, такими как UITableView/UICollectionView | [![Build](https://github.com/surfstudio/ReactiveDataDisplayManager/actions/workflows/Build.yml/badge.svg)](https://github.com/surfstudio/ReactiveDataDisplayManager/actions/workflows/Build.yml) |
-| [NodeKit](https://github.com/surfstudio/NodeKit) | Быстрое и удобное построение комплексного сетевого слоя | [![GitHubActions Build Status](https://github.com/surfstudio/NodeKit/workflows/CI/badge.svg)](https://github.com/surfstudio/NodeKit/actions) |
-| [SurfUtils](https://github.com/surfstudio/iOS-Utils) | Набор небольших утилит, позволяющих сократить траты времени на рутинные действия | [![GitHubActions Build Status](https://github.com/surfstudio/iOS-Utils/workflows/CI/badge.svg)](https://github.com/surfstudio/iOS-Utils/actions) |
-| [DebugScreen](https://github.com/surfstudio/debug-screen-ios) | Библиотека для быстрого создания и кастомизации экрана отладки приложения | [![GitHubActions Build Status](https://github.com/surfstudio/debug-screen-ios/workflows/CI/badge.svg)](https://github.com/surfstudio/debug-screen-ios/actions) |
-| [SurfGen](https://github.com/surfstudio/SurfGen) | Генератор сервисного слоя и слоя моделей по спецификации в формате openAPI 3.x | [![Build Status](https://github.com/surfstudio/SurfGen/workflows/release/badge.svg)](https://github.com/surfstudio/SurfGen/actions) |
+| [RDDM](https://github.com/surfstudio/ReactiveDataDisplayManager) | A library speeding up development when handling collections such as UITableView/UICollectionView | [![Build](https://github.com/surfstudio/ReactiveDataDisplayManager/actions/workflows/Build.yml/badge.svg)](https://github.com/surfstudio/ReactiveDataDisplayManager/actions/workflows/Build.yml) |
+| [NodeKit](https://github.com/surfstudio/NodeKit) | A quick and easy way to build a complex network layer | [![GitHubActions Build Status](https://github.com/surfstudio/NodeKit/workflows/CI/badge.svg)](https://github.com/surfstudio/NodeKit/actions) |
+| [SurfUtils](https://github.com/surfstudio/iOS-Utils) | A set of small utilities that help cut down the time spent on routine actions | [![GitHubActions Build Status](https://github.com/surfstudio/iOS-Utils/workflows/CI/badge.svg)](https://github.com/surfstudio/iOS-Utils/actions) |
+| [DebugScreen](https://github.com/surfstudio/debug-screen-ios) | A library that helps quickly create and customize a debug screen of an app | [![GitHubActions Build Status](https://github.com/surfstudio/debug-screen-ios/workflows/CI/badge.svg)](https://github.com/surfstudio/debug-screen-ios/actions) |
+| [SurfGen](https://github.com/surfstudio/SurfGen) | A generator creating the service and model layer in accordance with an openAPI 3.x specification | [![Build Status](https://github.com/surfstudio/SurfGen/workflows/release/badge.svg)](https://github.com/surfstudio/SurfGen/actions) |
 
-### Список проектов в фазе поддержки
+### A list of projects undergoing support
 
-| Название | Описание | Статус |
+| Name | Description | Status |
 | :--- | :--- | :--- |
-| [TextFieldsCatalog](https://github.com/chausovSurfStudio/TextFieldsCatalog) | Библиотека для построение широко кастомизируемого поля ввода со множеством встроенных фичей | [![GitHubActions Build Status](https://github.com/chausovSurfStudio/TextFieldsCatalog/workflows/CI/badge.svg)](https://github.com/chausovSurfStudio/TextFieldsCatalog/actions) |
-| [SurfPlaybook](https://github.com/surfstudio/SurfPlaybook) | Библиотека для быстрого и легкого построения playbook-а проекта | [![GitHubActions Build Status](https://github.com/surfstudio/SurfPlaybook/workflows/CI/badge.svg)](https://github.com/surfstudio/SurfPlaybook/actions) |
+| [TextFieldsCatalog](https://github.com/chausovSurfStudio/TextFieldsCatalog) | A library that helps build an extensively customizable input field with a wide variety of built-in features | [![GitHubActions Build Status](https://github.com/chausovSurfStudio/TextFieldsCatalog/workflows/CI/badge.svg)](https://github.com/chausovSurfStudio/TextFieldsCatalog/actions) |
+| [SurfPlaybook](https://github.com/surfstudio/SurfPlaybook) | A library that provides a quick and easy way to build a project playbook | [![GitHubActions Build Status](https://github.com/surfstudio/SurfPlaybook/workflows/CI/badge.svg)](https://github.com/surfstudio/SurfPlaybook/actions) |
 
-### Архив более не поддерживаемых решений и репозиториев
+### An archive of solutions and repositories we no longer support
 
-- [MaskInterpreter](https://github.com/surfstudio/MaskInterpreter) Интерпретатор масок для пользовательского ввода
-- [CoreEvents](https://github.com/surfstudio/CoreEvents) C#-подобные события
-- [TargetsCheck](https://github.com/surfstudio/TargetsCheck) Cкрипт для проверки консистентности проекта, содержащего несколько Targets
-- [Obj-C Code Style](https://github.com/surfstudio/objective-c-style-guide) Obj-C код стайл
-- [Xcode-Project-Templates](https://github.com/surfstudio/Xcode-Project-Templates) Набор шаблонов для упрощения процесса создания проекта
+- [MaskInterpreter](https://github.com/surfstudio/MaskInterpreter) A mask interpreter for user input
+- [CoreEvents](https://github.com/surfstudio/CoreEvents) C# like events
+- [TargetsCheck](https://github.com/surfstudio/TargetsCheck) A script to check consistency in a project containing several Targets
+- [Obj-C Code Style](https://github.com/surfstudio/objective-c-style-guide) Obj-C Code Style
+- [Xcode-Project-Templates](https://github.com/surfstudio/Xcode-Project-Templates) A set of templates to simplify the process of creating a project
 
-### Форки сторонних библиотек
+### Forks of third-party libraries
 
-- [Generamba](github.com/surfstudio/Generamba) Для работы с Bundler
-- [WSTagsField](https://github.com/surfstudio/WSTagsField) Исправили краш и поддержка
-- [Popover](https://github.com/surfstudio/Popover) Исправили баг с расчетом размеров Popover'а
-- [PluggableApplicationDelegate](https://github.com/surfstudio/PluggableApplicationDelegate) Поддержка
-- [SwiftTheme](https://github.com/surfstudio/SwiftTheme) Добавили alpha-канал к представлению цвета в hex
-- [MWPhotoBrowser](https://github.com/surfstudio/MWPhotoBrowser) Багфиксинг и поддержка
-- [TLYShyNavBar](https://github.com/surfstudio/TLYShyNavBar) Поддержка
-- [ICViewPager](https://github.com/surfstudio/ICViewPager) Доработка и поддержка
-- [NSObject+Rx](https://github.com/surfstudio/NSObject-Rx) Добавили совместимость с RxSwift ~> 3.1.0
-- [RxGesture](https://github.com/surfstudio/RxGesture) Понизили deployment target до iOS 8.0
-- [OpalImagePicker](https://github.com/surfstudio/OpalImagePicker) Доработка и поддержка
+- [Generamba](github.com/surfstudio/Generamba) To work with the Bundler
+- [WSTagsField](https://github.com/surfstudio/WSTagsField) Fixed a crash, support
+- [Popover](https://github.com/surfstudio/Popover) Fixed the bug in Popover dimension calculations
+- [PluggableApplicationDelegate](https://github.com/surfstudio/PluggableApplicationDelegate) Support
+- [SwiftTheme](https://github.com/surfstudio/SwiftTheme) Added an alpha channel to color presentation in hex
+- [MWPhotoBrowser](https://github.com/surfstudio/MWPhotoBrowser) Fixing bugs and support
+- [TLYShyNavBar](https://github.com/surfstudio/TLYShyNavBar) Support
+- [ICViewPager](https://github.com/surfstudio/ICViewPager) Tweaks and support
+- [NSObject+Rx](https://github.com/surfstudio/NSObject-Rx) Added compatibility with RxSwift ~> 3.1.0
+- [RxGesture](https://github.com/surfstudio/RxGesture) Brought deployment target down to iOS 8.0
+- [OpalImagePicker](https://github.com/surfstudio/OpalImagePicker) Tweaks and support
