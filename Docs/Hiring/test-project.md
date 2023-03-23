@@ -22,5 +22,5 @@ The main purpose of this test project is to check your basic skills in developin
 ### we recommend:
 * taking a look at the materials in our [repository](https://github.com/surfstudio/Surf-iOS-Developers)
 * using system components and libraries to their full extent (the use of third-party components, libraries, and frameworks should be justified in the Readme of your project)
-* paying attention to code organization and project structure (feel free to use our [code style](https://github.com/surfstudio/SwiftCodestyle)))
+* paying attention to code organization and project structure (feel free to use our [code style](https://github.com/surfstudio/SwiftCodestyle))
 * treating your project code as a part of a larger project and not a small local app
