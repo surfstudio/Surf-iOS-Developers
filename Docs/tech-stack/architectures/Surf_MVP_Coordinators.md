@@ -1,110 +1,114 @@
-# **Coordinated Surf MVP**
+# Coordinated Surf MVP
 
-## Содержание
+- [Coordinated Surf MVP](#coordinated-surf-mvp)
+  - [Foreword](#foreword)
+  - [Architecture in detail](#architecture-in-detail)
+  - [Pros and cons of Coordinated SurfMVP](#pros-and-cons-of-coordinated-surfmvp)
+    - [Pros](#pros)
+      - [Reusability](#reusability)
+      - [Navigation](#navigation)
+      - [Layout](#layout)
+      - [Deeplinks and Push Notifications](#deeplinks-and-push-notifications)
+    - [Cons](#cons)
+      - [Large coordinators](#large-coordinators)
+      - [A lot of code](#a-lot-of-code)
+      - [Memory Leaks](#memory-leaks)
+  - [UIAlertController and Coordinators](#uialertcontroller-and-coordinators)
+  - [When do you use Coordinated SurfMVP?](#when-do-you-use-coordinated-surfmvp)
+  - [When don’t you use Coordinated SurfMVP?](#when-dont-you-use-coordinated-surfmvp)
+  - [Code generation](#code-generation)
 
-* [Предисловие](#предисловие)
-* [Описание архитектуры](#описание-архитектуры)
-* [Плюсы и минусы Coordinated SurfMVP](#плюсы-и-минусы-coordinated-surfmvp)
-  * [Плюсы](#плюсы)
-  * [Минусы](#минусы)
-* [UIAlertController and Coordinators](#uialertcontroller-and-coordinators)
-* [Когда использовать Coordinated SurfMVP](#когда-использовать-coordinated-surfmvp)
-* [Когда не стоит использовать Coordinated SurfMVP](#когда-не-стоит-использовать-coordinated-surfmvp)
-* [Кодогенерация](#кодогенерация)
+## Foreword
 
-## Предисловие
-
-Этот архитектурный паттерн переродился из уже давно принятого за стандарт у нас в студии **SurfMVP**. Причиной появления новой надстройки над **SurfMVP** послужили проблемы с навгиацией в приложениях, которые начали разрастаться со временем, набирать массу сложных фич, реализация которых затруднялась при использование **routers**, которые мы ввели в **SurfMVP**. 
-
-Из-за того, что навигация в приложение написанном на **SurfMVP** строится посредством обращение одного модуля через router к другому модулю. Схематично это выглядит следующим образом: 
+This pattern in architecture is our new take on SurfMVP, the pattern long acknowledged as a standard in our studio. The reason there is a new add-on to SurfMVP is because of navigation issues that started gradually spreading through apps, gaining a slew of complex features that grew harder to implement because we were using routers, entities we had introduced to SurfMVP.
 
 ![SurfMVPNavigation](sources/surf_mvp_navigation.jpeg)
 
-<p align="center">Схема навигации в Surf MVP</p>
+<p align="center">Surf MVP Navigation</p>
 
-**Coordinated Surf MVP** меняет концепт навигации в приложение, убирает акцент с отдельно существующих модулей объединяя их в группы модулей, выполняющих общие действия. 
+Coordinated Surf MVP redefines the concept of navigation in an app and shifts the focus from separate modules by clustering them into groups of modules that perform common actions.
 
-## Описание архитектуры 
+## Architecture in detail
 
-В основе архитектуры **Coordinated Surf MVP** лежит привычный для нас **Surf MVP**. Подробней можно прочитать [тут](Surf_MVP.md). 
+Coordinated Surf MVP is based on the already familiar Surf MVP. Find out more about it [here](Surf_MVP.md).
 
 ![SurfMVPNavigation](sources/coordinated_surf_mvp.jpeg)
 
-<p align="center">Схема Coordinated Surf MVP – модуль</p>
+<p align="center">Coordinated Surf MVP—module</p>
 
-**Coordinated SurfMVP** – это архитектурный паттерн, в котором, в отличие от SurfMVP, мы убрали сущность Router, которая находилась внутри каждого отдельного модуля. Парадигма построения приложения немного изменилась. Модули теперь не являются полностью независимыми. Каждый модуль, за исключением полностью переиспользуемых, находится в отдельном обособленном UserFlow, который по задумке должен выполнять какое-то общее действие, приводящее пользователя к желаемому результату.
+Coordinated SurfMVP is a pattern in architecture where, unlike in SurfMVP, we got rid of an entity called Router, which was inside every single module. The paradigm of building an app has changed slightly. The modules are no longer fully independent. Each module, except for the fully reusable ones, stays in an isolated UserFlow, which is intended to perform a common action leading a user to the desired result.
 
-Например, набор экранов авторизации может является примером такого флоу. 
+A set of authorization screens can be an example of such a flow.
 
-В Coordinated SurfMVP сущность Router заменила сущность [Coordinator](http://khanlou.com/2015/01/the-coordinator/), которая теперь отвечает за работу навигации не одного отдельного модуля, а набора модулей, которые связаны друг с другом логически. Это упрощает навигацию и работу с приложением. Схематично приложение будет выглядить так: 
+In Coordinated SurfMVP, an entity called Router has replaced an entity called [Coordinator](http://khanlou.com/2015/01/the-coordinator/), which is now in charge of navigation inside not just a single module but a set of modules logically connected to each other. This makes navigation and handling of an app much simpler. Here’s what an app would look like schematically:
 
 ![SurfMVPNavigation](sources/сoordinated_surf_mvp_scheme.jpeg)
 
-<p align="center">Схема приложения с Coordinated Surf MVP</p>
+<p align="center">An app with Coordinated Surf MVP</p>
 
-В самом верху стоит ApplicationCoordinator, который отвечает за первоначальный роутинг в приложении. К примеру, кейс, когда пользователь авторизован, тогда мы его отправим сразу в основную часть приложения, в противном случае, мы отправим его на экран авторизации.
+At the very top, you can see the ApplicationCoordinator, which is in charge of initial routing in an app. Say a user is already authorized. Then we’ll send them straight to the main part of the app. Otherwise, we’ll send them to the authorization screen.
 
-Схематично навигация в приложение выглядит теперь таким образом. Каждый отдельный UserFlow обращается к собственному координатору, который уже в свою очередь решает, что будет происходить в дальнейшем. Ответственность по передачи данных и инициации дальнейшей навигации теперь лежит на координаторе, он уже связывается с другими модулями или другими координаторами, чтобы продолжить построение стека навигации.
+The app now works as follows: every single UserFlow refers to its own coordinator, which, in turn, decides what is going to happen next. The responsibility of transferring data and initiating any further navigation now falls on the Coordinator. It is now in charge of communicating with other modules or coordinators in order to build the navigation stack.
 
 ![SurfMVPNavigation](sources/coordniated_surf_mvp_navigation.jpeg)
 
-<p align="center">Схема навигации в Coordinated Surf MVP</p>
+<p align="center">Navigation in Coordinated Surf MVP</p>
 
-## Плюсы и минусы Coordinated SurfMVP
+## Pros and cons of Coordinated SurfMVP
 
-### **Плюсы:**
+### Pros
 
-#### Переиспользование
+#### Reusability
 
-Основной плюс подхода с координаторами — возможность переиспользовать целые блоки навигации внутри приложения. Теперь из любого места в приложении есть возможность вызвать этот координатор и не думать ни о чем, кроме как о завершении его работы.
+The main upside to using coordinators is that you can reuse entire blocks of navigation in an app. Now we can call the Coordinator from anywhere in the app and focus solely on it finishing the task.
 
-#### Навигация
+#### Navigation
 
-Так как логика навигации обособлена внутри отдельного координатора, теперь гораздо удобней следить за навигацией: достаточно открыть один файл и вся картина перед глазами. Нет больше необходимости протыкивать все отдельные модули, чтобы понять, что за чем тянется, собирать приложение и смотреть в дизайн.
+Because navigation logic is now isolated in a separate coordinator, keeping track of the navigation has become much easier: all you have to do is open one file to see the big picture. No more going through all the separate modules to trace the connections, building an app, and checking the design.
 
-#### Проектирование
+#### Layout
 
-Удобнее проектировать в больших командах. Достаточно на этапе проектирования отдельной новой фичи выделить время на построение всей навигации и инициализации всех модулей, после чего делегировать разработку большому количеству разработчиков, и уже намного меньше будет возникать проблем с интеграцией этих экранов между друг другом. 
+It’s easier to design the layout with a large team. Simply find time to plot all the navigation and initialize all the modules while you’re designing a new feature, then delegate development to a team of developers, and you’ll run into far fewer issues integrating screens with one another.
 
-Для этого стоит первым делом инициализировть все модули и описать их ModuleOutput и ModuleInput. После чего можно полностью реализовать Coordinator и связать все модули. Данную задачу может выполнять один человек. После данного этапа несколько разработчиков могут комфортно разрабатывать несколько модулей. 
+To do that, you have to first initialize all the modules and define them in ModuleOutput and ModuleInput. Only then can you fully implement the Coordinator and connect all the modules. All of it could be done by a single person. After this stage, multiple developers can work on multiple modules simultaneously like it’s nothing.
 
-#### Deeplinks и Push-Notifications
+#### Deeplinks and Push Notifications
 
-Интеграция Deeplinks и Push-Notifications перестала быть головной болью. Coordinated SurfMVP позволяют очень просто реализовать работу с любой внешней навигацией. Подробней про это можно прочитать в статье [Панова](https://medium.com/blacklane-engineering/coordinators-essential-tutorial-part-ii-b5ab3eb4a74). 
+Integrating Deeplinks and Push Notifications is no longer a headache. With Coordinated SurfMVP, integrating any external navigation is really easy. You can find out more in an article written by [Andrei Panov](https://medium.com/blacklane-engineering/coordinators-essential-tutorial-part-ii-b5ab3eb4a74).
 
 <details>
-<summary>Подробней про реализацию</summary>
+<summary>About implemmentation</summary>
 
-Для того чтобы держать всю информацию о навигации в одном месте создаем enum `DeepLinksOptions` в нем определяются все конечные модули, до куда мы хотим добраться. Далее необходимо реализовать методы по инициализации этого enum из мест где обрабатываются DeepLinks и/или Push-Notifications.
+To keep all the information about navigation together, create a DeepLinksOptions enum, defining all the end modules you eventually need to reach. Then implement the methods to initialize this enum from where Deepllinks and/or Push Notifications are processed.
 
-После чего экземпляры данного enum необходимо пробросить по методам `start(with deepLinkOption: DeepLinkOption?)` до координатора, который сможет отобразить целевой экран. Таким образом выстраивается цепочка экранов, которые необходимо отобразить. 
+Then, instances of this enum must be passed through the `start(with deepLinkOption: DeepLinkOption?)` methods until they reach the Coordinator in charge of presenting the screen in question. In doing so, we form a chain of screens to be displayed.
 
-В случае если DeepLink или Push-Notification приходит в момент, когда приложение активно, то в координаторах необходимых для построения стека приложения нам необходимо определить методы `handle(deepLinkOption: DeepLinkOption)`, которые позволят добраться до нужного координатора без пересоздания. 
+If we receive a DeepLink or Push Notification while the app is running, we must locate the coordinators required to build the app stack and define the `handle(deepLinkOption: DeepLinkOption)` methods that will allow us to reach the correct coordinator without having to recreate anything.
 
-Для определения, создан ли уже нужный дочерний координатор необходимо использовать generic-метод `hasDependency<T>(ofType: T.Type)`, и уже основываясь на полученном зачение необходимо обрабатывать методы start или handle.
+To check if there is a child Coordinator already created you need to use the generic `hasDependency<T>(ofType: T.Type)` method and only then, based on the value obtained, process the start or handle methods.
 </details>
 
-### Минусы
+### Cons
 
-#### Большие координаторы
+#### Large coordinators
 
-Из-за концентрации всей логики в одном месте становится гораздо сложнее не утонуть в большом количестве строк кода. Если не следить за соблюдением принципа единой ответственности, то конечно, координатор может вырасти в большого монстра, и все плюсы по читаемости кода легко испарятся.
+Because all logic is kept together, it becomes much harder to stay afloat in lines and lines of code. If you forget to follow the single-responsibility principle, then, of course, your coordinator may evolve into a giant monster, and all the pros of code readability will go up in smoke.
 
-#### Много кода
+#### A lot of code
 
-Приходится много писать, чтобы достичь красоты в коде. Из-за большого количества слоев в приложении, каждый из которых отвечает за отдельное действие, приходится пробиваться через эти слои, чтобы дойти до желаемого координатора.
+You have to write a lot to make your code look nice. Because an app has so many layers, each of which is in charge of its own action, you have to battle your way through the layers to find the coordinator you need.
 
 #### Memory Leaks
 
-Проблема не нова, но стоит следить за этим делом, чтобы не попасть в просак. Основная причина появления утечек памяти при работе с координаторами – это retain-циклы в коллбеках модулей. Так что нужно очень внимательно следить за сильными ссылками внутри замыканий.
+It’s nothing new, but you have to keep track of it if you don’t want to drop the ball. The main reason people have memory leaks when they use coordinators is that they have retain cycles in module callbacks. So you have to keep a close eye on strong references inside closures.
 
-Основной причиной появления утечек памяти при работе с координаторами является возможность использования **strong** ссылок внутри **closures**. Так как связь между координатором, 
+The main reason we see memory leaks when we use coordinators is that you can use strong references in closures.
 
 <details>
-<summary>Типовой кейс</summary>
-Типовой кейс — инициализация нового Координатора и реализация closure finishFlow. Захват weak coordinator является обязательным, иначе Координатор будет ссылаться сам на себя, что повлечет утечку в виде AuthCoordinator.
+<summary>A typical case</summary>
+A typical case is initializing a new Coordinator and implementing closure finishFlow. Capturing a weak coordinator is mandatory; otherwise, the Coordinator will be referencing itself, which would result in a leak in the form of an AuthCoordinator.
 
-```Swift
+```swift
     func runAuthFlow() {
         let coordinator = AuthCoordinator(router: MainRouter())
         coordinator.finishFlow = { [weak self, weak coordinator] in
@@ -118,25 +122,23 @@
 
 ## UIAlertController and Coordinators
 
-При работе с Coordinator любая навигация должна выполняться в нем. `UIAlertController`также влияет на навигацию сам по себе, а зачастую еще и открывает экраны по выбору одного из action.
+When you are using the Coordinator, all the navigation has to be executed there. The `UIAlertController` alone affects navigation as well. Moreover, it often opens screens as selected by one of the actions.
 
-Таким образом для работы `UIAlertController ` создается отдельный модуль SurfMVP, который отображается координатором. Для инициализации таких модулей был написа [шаблон](https://github.com/surfstudio/generamba-templates/tree/master/surf_mvp_coordinatable_alert). 
+As a result, in order to use `UIAlertController`, you must first create a separate SurfMVP module that will be presented by the Coordinator. To initialize such modules, we have written a [template](https://github.com/surfstudio/generamba-templates/tree/master/surf_mvp_coordinatable_alert).
 
-## Когда использовать Coordinated SurfMVP
+## When do you use Coordinated SurfMVP?
 
-- Структура экранов сложна и подвержена частым изменениям;
-- Есть Deeplinks и/или Push-Notifications со сложной навигацией;
-- У вас достаточно большая команда и приложение либо нужно писать с нуля, либо нужно реализовать большую фичу со связанными между собой модулями и их будут писать разные разработчики параллельно. 
+- The structure of your screens is complex and subject to frequent change;
+- You have Deeplinks and/or Push Notifications with complex navigation;
+- Your team is pretty big and you need to either write an app from scratch or implement a large feature with different modules being connected to each other and written by several developers simultaneously.
 
-## Когда не стоит использовать Coordinated SurfMVP
+## When don’t you use Coordinated SurfMVP?
 
-- Проект достаточно маленький и не планирует быстро развиваться;
-- На проекте очень простая структура экранов, и она не подвержена сильным изменениям.
+- The project is pretty small and isn’t looking at rapid growth;
+- The structure of screens in the project is pretty simple and not subject to drastic changes.
 
+## Code generation
 
+Similar to SurfMVP we’ve created a [Generamba Template](https://github.com/surfstudio/generamba-templates). Find out more about it [here](Surf_MVP.md).
 
-## Кодогенерация 
-
-Аналогично **SurfMVP** мы сделали [Generamba Template](https://github.com/surfstudio/generamba-templates). Подробней про это можно почитать [тут](Surf_MVP.md). 
-
-Для интеграции в проект используйте заготовленные шаблоны для приложений с координаторами. Они находятся [тут](https://github.com/surfstudio/Xcode-Project-Templates).
+To integrate it into your project, use templates for apps containing coordinators. You can find them [here](https://github.com/surfstudio/Xcode-Project-Templates).

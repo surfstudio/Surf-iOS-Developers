@@ -1,72 +1,72 @@
-# Процессы
+# Procedures
 
-## Состав Surf
+## The structure of Surf
 
-На данный момент в Surf сушествует несколько четко определенных отделов:
+Currently, Surf consists of several distinct units:
 - iOS
 - Android
 - Flutter
-- Back-end и Front-end
+- Backend and Frontend
 - QA
-- Дизайн-отдел
-- Аналитика
-- Управление проектами
+- Design
+- Analytics
+- Project management
 - Marketing
 - DevRel
-- Продажи
+- Sales
 - DevOps
-- Отдел автоматизации и аналитики
-- HR и рекрутинг
-- Административный отдел
+- Automation and analytics
+- HR and recruitment
+- Administrative Office
 
-У каждого отдела есть свой руководитель, в некоторых отделах - есть выделенные лиды команд: где-то они отвечают за развитие направления в целом, где-то курируют группы сотрудников.
+Each unit has its own head, and some units have designated team leaders. They could be responsible for development in general or supervise groups of subordinate personnel.
 
-Рост и развитие сложно произвести без подобного разделения, где каждый будет заниматься своим делом, а вертикаль власти позволяет совершать более эффективное управление рабочими процессами. Но с ростом мы постарались сохранить дружескую и доверительную атмосферу: стоящая инициатива любого сотрудника по изменению любых процессов может воплотиться в жизнь. Либо после проведенного 1-1а с руководителем, либо пройдя через орг коммитет по принятию подобных глобальных инициатив в рамках всей студии.
+Growth and development are hard to achieve unless you have a structure like this where everyone does what they are best at and an executive chain of command helps you manage the workflow more effectively. Even though we’re growing and expanding, we strive to keep the environment friendly and trust-based. No matter who comes up with it, a note-worthy initiative to adjust our workflow may be put into action. It could happen after the person has a one-on-one meeting with their superior or after the idea is approved by the committee that undertakes global initiatives in the studio.
 
-## Состав команд
+## Teams
 
-Классическая команда на среднестатистическом проекте состоит из:
-- платформенных разработчиков (либо по 2-4 iOS разработчика, и столько же на Android, либо 3-5 Flutter разработчиков);
-	- может быть как и меньшее количество разработчиков, так и большее, в зависимости от масштаба проекта;
-- аналитика (BA);
-- тестировщика (QA);
-- менеджера проекта (PM);
-- дизайнера.
+A classic team assigned to our average project would have the following members:
+- platform developers (either 2-4 iOS and Android developers each or 3-5 Flutter developers);
+    - there could be more or fewer of them depending on the scale of a project;
+- analyst (BA);
+- tester (QA);
+- project manager (PM);
+- designer.
 
-В зависимости от проекта некоторые роли могут быть отсутствовать, например, дизайнер или аналитик могут быть со стороны заказчика. Либо наоборот добавляться новые роли, например backend-разработчкик со стороны Surf. Но в целом стараемся придерживать именно такого формата команд, который позволяет вести проект более полноценно, вникая во все его аспекты, и позволяя выдать наиболее эффективное решение, как с точки зрения технической реализации, так и с точки зрения UX.
+Depending on a project, some roles might be omitted, e.g., we might have a designer or analyst on the client’s side. By contrast, new roles could be added, e.g., a back-end developer from Surf. However, in general, we strive to build a team that will assist us in running a project effectively, taking into account all of its aspects and providing the most effective solutions in terms of both technical implementation and UX.
 
-Backend команда в основном находятся либо на стороне клиента, либо реализуется силами другого подрядчика. В любом случае, между командами фронта и бэка налаживается коммуникация для решения повседневных вопросов.
+More often than not, the back-end team is on our client’s side or provided by yet another contractor. Whatever the case, we establish communication between the front-end and back-end teams so that we can deal with everyday matters together.
 
-Даже в самых малых командах всегда присутствует менеджер проекта для решения вопросов со стороной заказчика, потому что мы занимаемся outsource разработкой и не занимаемся outstuff-ом сотрудников.
+Because we outsource development rather than stuff, even the smallest teams always have a project manager to deal with issues in collaboration with the client.
 
-## Как ведется разработка
+## Development
 
-Flow работ может варьироваться в зависимости от проекта, далее представлен традиционный вариант реализации MVP-версии приложения, который поддерживается на большинстве проектов студии:
-- начинается все с "нулевого спринта", когда команда аналитиков, дизайнеров, лиды платформенных команд разработки и ЛПР со стороны клиента договариваются о базовых требованиях к проекту, проектируется и утверждается основной дизайн и ТЗ к нему;
-- скоуп оценивается лидами платформенных команд, подбирается команда, утверждается смета проекта и даты сдачи;
-- задачи всего скоупа делятся на спринты, каждый спринт содержит законченную фичу и идет приблизительно 2-3 недели;
-- далее следует итеративная работа в рамках спринтов, где:
-	- на вход команде разработке и QA поступают требования в виде ТЗ и макетов дизайна;
-	- требования уточняются, устраняются все несоответствия между ТЗ, макетами и ожиданиями клиента;
-	- задачи декомпозируются командой (верхнеуровневая декомпозиция проводится лидом команды, более детальная - в зависимости от проекта, может проводиться как лидом, так и разработчиками);
-	- производится оценка скоупа (в зависимости от проекта может быть использован так и простой механизм с оценкой в часах, так и в story-поинтах, возможно применение poker-planning);
-	- далее следует этап разработки;
-	- этап отладки;
-	- и все начинается по-новой.
+Our workflow may vary depending on the project. Below, you can see the traditional way of implementing an MVP app, which we follow on most of our projects:
+- it all starts with a “zero sprint” where a team of analysts, designers, development team leaders and a decision maker on client’s side agree on basic requirements set for the project, create and approve the core design and technical specifications for it;
+- the scope is then estimated by the team leaders of each platform, the teams are built, and budgets and deadlines are approved;
+- the tasks within the entire scope are grouped into sprints, each containing a complete feature and lasting for approximately 2-3 weeks;
+- that is followed by iterative work within each sprint where:
+    - development team and QA accept requirements in the form of technical specs and design layouts;
+    - the requirements are clarified, with all inconsistencies between the specs, layouts, and client’s expectations eliminated;
+    - the team then decomposes the tasks (the top-level decomposition is performed by the team leader, and the detailed decomposition is performed by either the leader or developers, depending on the project).
+    - the scope is then evaluated (depending on the project, we may use either simple hourly estimates or story points, or even poker planning);
+    - that is followed by development;
+    - debugging;
+    - repeat all over again.
 
-Планирование и реализация задач построены следующим образом:
-- во время этапы реализации спринта лид команды проводит планирование и доуточнение всех требований ТЗ для следующего спринта, производится верхнеуровневая декомпозиция
-- когда задачи спринта сдаются и отправляются на тестирование - команда уже может приступать к более детальному проективанию и оценке задач следующей итерации, параллельно производя отладку по фидбеку от QA
-- чтобы сразу после этого вступить в новую итерацию
+Here’s how we plan and implement tasks:
+- during each sprint, the team leaders plan and clarify all the requirements in the technical specs set for the following sprint, which is followed by top-level decomposition
+- once sprint tasks are done and submitted for testing - the team can already proceed to make detailed design and estimates for the tasks in the next sprint while they are debugging the code according to the feedback they receive from QA…
+- …to then enter the next sprint right away
 
-Благодаря такому небольшому накладыванию этапов и тому, что лид команды идет на шаг впереди - обеспечивается бесперебойная работа и отсутствие простоев между итерациями.
+Thanks to this slight overlap between stages and the fact that the team leader is one step ahead of their team, we achieve continuous operation and avoid holdups between iterations.
 
-После завершение работы над MVP-версией проекта - flow-работы в рамках спринта сохраняется. Только задачи поступают не из определенного на старте скоупа, а по фидбеку от клиента, пользователей приложения, потребностей бизнеса, и других заинтересованных сторон, проходя точно так же все стадии - от анализа до разработки и тестирования.
+After an MVP version is finished, the workflow for sprints stays the same. Only the tasks are now based not on the scope pre-defined at the start but on the feedback we receive from the client, users, business needs, and other stakeholders. The process goes through all the same stages: from analysis to development and testing.
 
-## Обеспечение качества
+## Quality assurance
 
-Для поддержания качества проекта на требуемом уровне проводятся следующие активности:
-- code-review перед мержем любого изменения как неотемлемая часть работы любой команды
-- осуществляется учет и работа с техдолгом: потенциально опасные места вносятся в реестр, дается оценка времени исправления, оценка риска влияния на продукт, выделяется время на решение основных угроз проекту
-- design-review позволяет убедиться в корректности верстки и верной работе спроектированного UX
-- периодические техретро и общекомандные ретро дают возможность обсудить назревшие проблемы, проанализировать прошедшие этапы, выявить ошибки и принять действия, которые не допустят совершения подобных ошибок в будущем
+To assure that the quality of our projects stays at the needed level, we do the following:
+- code-review before any changes are merged is integral to the way all of our teams work
+- technical debt is accounted for and dealt with: any potential worm corners are registered, we evaluate the time it takes to fix them, the risk of them affecting the product, and find time to eliminate the main threats to the project
+- design-review helps us make sure that all layouts are correct and the UX that we have designed works properly
+- routine technical retro meetings and team retro meetings give us a chance to discuss the most pressing issues, analyze the previous stages, pinpoint mistakes, and take preventive actions

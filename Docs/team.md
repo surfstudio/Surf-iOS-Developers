@@ -1,59 +1,58 @@
-# Команда
+# Team
 
-## Что для нас главное?
+## What do we value the most?
 
-Ответ прост - люди:
-- мы оказываем услуги outsource разработки, но при этом бережно относимся к каждому проекту, как в продуктовой разработке. Мы следим за качеством приложений, улучшаем внутренние инструменты, подходы, процессы, чтобы сделать проект максимально хорошо;
-- и понимаем, что наш самый ценный ресурс - наши люди. Минимум бюррократии, интересные проекты, ротации команд, возможность расти и развиваться в выбранном направлении.
+That’s easy - people:
+- even though we provide outsourced development services, we handle each project with due care as if it were product development. We ensure the high quality of our apps, and improve the in-house tooling, methods, and procedures, to do our projects proper justice;
+- that being said, we understand that our most valuable resource is our people. Minimum bureaucracy, engaging projects, team rotations, and an opportunity to choose the course of your personal growth.
 
-## Предметная область
+## Area of expertise
 
-Портфель с самыми разными проектами:
-- FinTech - приложения для банков и бирж
-- eCommerce - различные онлайн-магазины и программы лояльности, от небольших компаний до крупнейших игроков в своем секторе
-- FoodTech - заказ и доставка еды
-- корпоративные приложения, помогающие выстроить внутренние процессы заказчика
-- медицинские приложения, позволяющие получить консультацию врача или помогающие медперсоналу
-- обучающие платформы, соцсети, итд
+A versatile portfolio of projects:
+- FinTech — applications for banks and exchanges
+- eCommerce — a wide range of online stores and loyalty programs, starting from small businesses and all the way up to the largest market players
+- FoodTech — food orders and delivery
+- Enterprise apps that help to streamline the in-house procedures of the client
+- Healthcare apps that help to get an appointment or aid the healthcare personnel
+- Education platforms, social media, etc.
 
-Это могут быть небольшие проекты с командой в несколько человек и длительностью в несколько месяцев, так и крупные системы с командой в десяток человек, поддержка и развитие которых длится уже не один год.
+These could easily be small projects with a team of a few people lasting a few months. Or they could be large systems with a dozen people on the team and support and development lasting for far over a year.
 
-## Структура команды и отдела
+## Team and department structure
 
-- Во главе отдела стоит `head of ios`;
-- В каждой команде разработки есть `team-lead`, который отвечает не только за техническую реализацию проекта, но и помогает развиваться `разработчикам` своей команды.
+- The department is run by the `head of ios`;
+- Each team of developers has a `team-lead`, a person not only responsible for the technical implementation of a project but also for helping `developers` in their teams on their path to growth.
 
-Помимо этого существуют следующие направления развития, за каждое из которых в рамках отдела отвечает отдельный человек:
-- техническое развитие
-- работа с людьми
-- найм
-- стажировки и менторство
-- технический PR
-- продажи
+Besides that, there are the following growth areas with a dedicated person responsible for each of them within the department:
+- technological advances
+- personnel communications
+- recruitment
+- trainee jobs and mentorship
+- tech PR
+- sales
 
-## Возможности роста и развития
+## Growth opportunities
 
-Помогаем не стоять на месте:
-- прозрачная система грейдов поможет понять пробелы в навыках
-- при этом оцениваются на только технические навыки, но и навыки командной работы
-- регулярные 1-1ы с руководителем позволяют человеку оперативно получать фидбек о своей работе, либо дать обратную связь своему руководителю
+We help our talent to evolve:
+- our transparent grading system helps to find gaps in the skills they have
+- that said, we grade not only the technical skills but the teamwork as well
+- regular 1 to 1’s with a manager helps employees get timely feedback on their performance or leave feedback on their manager
 
-Чем мы занимаемся помимо проектов?
+Anything besides projects?
 
-1. Встречи отдела - еженедельные совместные созвоны, на которых мы рассматриваем новые технологии и подходы, шарим знания между проектами, рассказываем о своих успехах и неудачах, или просто проводим квизы с розыграшами призов
-2. Студийная работа - занимаемся созданием и поддержкой open-source проектов или чисто внутренних решений
-3. Tech PR - у каждого члена отдела есть возможность заниматься написанием статей, устроить live coding, вести подкасты, выступать на митапах и конференциях, в чем всегда помогут и подскажут как сделать лучше более опытные коллеги и команда dev-rel отдела
-4. Обучение сотрудников - можно принять участие в различных образовательных программах для начинающих разработчиков, или помочь провести онбординг нового сотрудника в команду
-5. Найм - возможность принять участие в процессе найма, проводя ревью кандидатов или участвуя в собеседованиях
-6. Корпоративы (как общие, так и внутри отдела), обучающие митапы (например, как эффективно проводить 1-1 беседы, управлять своим временем или принимать решения), surf-coffee, где можно поговорить с рандомным сотрудником студии, и многое другое
+1. Team meetings — weekly online meetings where we take a look at the newest technologies and methods, share what we’ve learned on various projects, share our successes and failures or simply hold quizzes and award the winners
+2. Studio activities — we work on creating and supporting open-source projects or exclusively in-house solutions
+3. Tech PR — each department member is free to write articles, hold live coding, record podcasts, and speak at meetups and conferences. That said, they can always expect help and advice from their senior colleagues and the dev-rel team
+4. Personnel training — employees can take part in various training programs available for beginners or help onboard a newcomer to their team
+5. Recruitment — there’s an opportunity to take part in recruitment by reviewing candidates or taking part in job interviews
+6. Corporate parties (both large and in separate departments), training meetups (e.g., how to hold effective 1-to-1 talks, manage your time or make decisions), surf-coffee, where random employees meet to chat, and much more
 
-## Плюшки
+## Perks
 
-Что хорошего мы предлагаем своим сотрудникам:
-- минимум бюррократии и автоматизация большого количества внутренних процессов, будь то подача заявление на отпуск или запрос на покупку ложки для обуви в офис
-- возможность гибкого графика работы
-- возможность удаленной работы из любой точки мира
-- предоставляем технику для работы (по желанию)
-- поощрение, в том числе и финансовое, за деятельность вне проектов (например, за участие в TechPR деятельности)
-- возможность оформления ДМС
-- белая заработная плата с оформлением по ТК РФ
+The good stuff we offer our employees:
+- minimum bureaucracy and a large chunk of our in-house procedures automated: whether it is requesting vacation or a shoehorn
+- flexible hours
+- working from your home office anywhere in the world
+- work devices provided (if needed)
+- rewards, including monetary ones, for anything you do outside your project (e.g., taking part in TechPR activities)
+- an opportunity to get private health insurance

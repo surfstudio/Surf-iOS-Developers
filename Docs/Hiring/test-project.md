@@ -1,27 +1,26 @@
-# Тестовый iOS проект
+# Test iOS project
 
-## Введение
+## Introduction
 
-Основная цель тестового задания – проверить основные навыки разработки клиент-серверного приложения для платформы iOS. Если уже имеется опыт работы с подобным проектом (в котором есть работа с сервером, кеширование, и который подходит под нижеописанные требования), то не нужно тратить время на реализацию проекта – достаточно поделиться с нами ссылкой проекта на GitHub. 
+The main purpose of this test project is to check your basic skills in developing a client-server app for iOS. If you already have some experience working on a similar project (the one that requires server interactions, and caching, and matches the requirements below), feel free to share the link to your project on GitHub instead.
 
-## Основные требования 
+## Main requirements
 
-### к технологиям 
+### technology
 
-* язык программирования Swift
-* проект опубликован на GitHub
-* в качестве источника данных использовать любое открытое API (можно выбрать [здесь](https://github.com/toddmotto/public-apis) или [здесь](https://github.com/surfstudio/iOSSpringSchool2020/blob/master/practice.md))
+* programming language — Swift
+* project published on GitHub
+* use any open-source API as the data source (you can pick one [here](https://github.com/toddmotto/public-apis) or [here](https://github.com/surfstudio/iOSSpringSchool2020/blob/master/practice.md))
 
-### к реализации 
+### implementation
 
-* приложение должно состоять минимум из 2-х экранов: (1) список объектов, (2) детальный просмотр объекта
-* приложение должно получать объекты из открытого API (с REST архитектурой)
-* приложение должно работать без подключения к сети
-* операции по загрузке и обработке данных должны выполняться в фоновом потоке
+* your app has to contain at least 2 screens: (1) a list of objects, (2) a detailed view of an object
+* your app has to receive objects from an open API (REST architecture only)
+* your app has to function offline
+* uploading and data processing operations have to run in the background thread
 
-### рекомендуется 
-
-* ознакомится с материалами из нашего [репозитория](https://github.com/surfstudio/Surf-iOS-Developers)
-* по максимуму использовать системные компоненты и библиотеки (использование сторонних компонентов, библиотек и фреймворком должно быть обосновано в Readme проекта)
-* уделить внимание организации кода и структуре проекта (можно использовать [наш code-style](https://github.com/surfstudio/SwiftCodestyle))
-* отнестись к коду проекта так, как будто он является частью большого проекта, а не маленьким локальным приложением
+### we recommend:
+* taking a look at the materials in our [repository](https://github.com/surfstudio/Surf-iOS-Developers)
+* using system components and libraries to their full extent (the use of third-party components, libraries, and frameworks should be justified in the Readme of your project)
+* paying attention to code organization and project structure (feel free to use our [code style](https://github.com/surfstudio/SwiftCodestyle))
+* treating your project code as a part of a larger project and not a small local app
