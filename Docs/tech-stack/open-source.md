@@ -16,6 +16,8 @@
 | :--- | :--- | :--- |
 | [TextFieldsCatalog](https://github.com/chausovSurfStudio/TextFieldsCatalog) | A library that helps build an extensively customizable input field with a wide variety of built-in features | [![GitHubActions Build Status](https://github.com/chausovSurfStudio/TextFieldsCatalog/workflows/CI/badge.svg)](https://github.com/chausovSurfStudio/TextFieldsCatalog/actions) |
 | [SurfPlaybook](https://github.com/surfstudio/SurfPlaybook) | A library that provides a quick and easy way to build a project playbook | [![GitHubActions Build Status](https://github.com/surfstudio/SurfPlaybook/workflows/CI/badge.svg)](https://github.com/surfstudio/SurfPlaybook/actions) |
+| [AnalyticsGen](https://github.com/surfstudio/swift-analytics-gen) | Tools that automatically generate analytics layer for mobile application | |
+| [AnyAnalytics](https://github.com/surfstudio/AnyAnalytics) | Library for easily integration analytics into your project | |
 
 ### An archive of solutions and repositories we no longer support
 

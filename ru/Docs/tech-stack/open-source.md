@@ -16,6 +16,8 @@
 | :--- | :--- | :--- |
 | [TextFieldsCatalog](https://github.com/chausovSurfStudio/TextFieldsCatalog) | Библиотека для построение широко кастомизируемого поля ввода со множеством встроенных фичей | [![GitHubActions Build Status](https://github.com/chausovSurfStudio/TextFieldsCatalog/workflows/CI/badge.svg)](https://github.com/chausovSurfStudio/TextFieldsCatalog/actions) |
 | [SurfPlaybook](https://github.com/surfstudio/SurfPlaybook) | Библиотека для быстрого и легкого построения playbook-а проекта | [![GitHubActions Build Status](https://github.com/surfstudio/SurfPlaybook/workflows/CI/badge.svg)](https://github.com/surfstudio/SurfPlaybook/actions) |
+| [AnalyticsGen](https://github.com/surfstudio/swift-analytics-gen) | Инструмент, который генерирует код для слоя аналитики мобильного приложения | |
+| [AnyAnalytics](https://github.com/surfstudio/AnyAnalytics) | Библиотека для быстрой интеграции аналитики в проект | |
 
 ### Архив более не поддерживаемых решений и репозиториев
 
