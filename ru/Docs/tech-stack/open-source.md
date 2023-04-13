@@ -19,6 +19,7 @@
 | [SwiftObfuscator](https://github.com/surfstudio/Surf-SwiftObfuscator) | Обфускатор для шифрования строковых значений | [![GitHubActions Build Status](https://github.com/surfstudio/Surf-SwiftObfuscator/workflows/Build/badge.svg)](https://github.com/surfstudio/Surf-SwiftObfuscator/actions) |
 | [AnalyticsGen](https://github.com/surfstudio/swift-analytics-gen) | Инструмент, который генерирует код для слоя аналитики мобильного приложения | |
 | [AnyAnalytics](https://github.com/surfstudio/AnyAnalytics) | Библиотека для быстрой интеграции аналитики в проект | |
+| [YandexMapsMobile Lite + SPM](https://github.com/surfstudio/surf-yandex-maps-ios-sdk) | YandexMapsMobile, Lite version, SPM-обёртка | |
 
 ### Архив более не поддерживаемых решений и репозиториев
 
