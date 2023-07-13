@@ -14,9 +14,10 @@
 
 | Название | Описание | Статус |
 | :--- | :--- | :--- |
-| [TextFieldsCatalog](https://github.com/chausovSurfStudio/TextFieldsCatalog) | Библиотека для построение широко кастомизируемого поля ввода со множеством встроенных фичей | [![GitHubActions Build Status](https://github.com/chausovSurfStudio/TextFieldsCatalog/workflows/CI/badge.svg)](https://github.com/chausovSurfStudio/TextFieldsCatalog/actions) |
 | [SurfPlaybook](https://github.com/surfstudio/SurfPlaybook) | Библиотека для быстрого и легкого построения playbook-а проекта | [![GitHubActions Build Status](https://github.com/surfstudio/SurfPlaybook/workflows/CI/badge.svg)](https://github.com/surfstudio/SurfPlaybook/actions) |
+| [ThirdPartyAuth](https://github.com/surfstudio/ThirdPartyAuth) | Упрощение авторизации и регистрации через соцсети. | [![GitHubActions Build Status](https://github.com/surfstudio/ThirdPartyAuth/actions/workflows/main.yml/badge.svg)](https://github.com/surfstudio/ThirdPartyAuth/actions/workflows/main.yml) |
 | [SwiftObfuscator](https://github.com/surfstudio/Surf-SwiftObfuscator) | Обфускатор для шифрования строковых значений | [![GitHubActions Build Status](https://github.com/surfstudio/Surf-SwiftObfuscator/workflows/Build/badge.svg)](https://github.com/surfstudio/Surf-SwiftObfuscator/actions) |
+| [TextFieldsCatalog](https://github.com/chausovSurfStudio/TextFieldsCatalog) | Библиотека для построение широко кастомизируемого поля ввода со множеством встроенных фичей | [![GitHubActions Build Status](https://github.com/chausovSurfStudio/TextFieldsCatalog/workflows/CI/badge.svg)](https://github.com/chausovSurfStudio/TextFieldsCatalog/actions) |
 | [AnalyticsGen](https://github.com/surfstudio/swift-analytics-gen) | Инструмент, который генерирует код для слоя аналитики мобильного приложения | |
 | [AnyAnalytics](https://github.com/surfstudio/AnyAnalytics) | Библиотека для быстрой интеграции аналитики в проект | |
 | [YandexMapsMobile Lite + SPM](https://github.com/surfstudio/surf-yandex-maps-ios-sdk) | YandexMapsMobile, Lite version, SPM-обёртка | |
